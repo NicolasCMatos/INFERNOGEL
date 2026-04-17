@@ -1,3 +1,27 @@
 [gd_scene format=3 uid="uid://v6ds72st8t2l"]
 
+[ext_resource type="Texture2D" uid="uid://16tfpb4kbks1" path="res://assets/z1gd2kwa4a361.webp" id="2_sq8yp"]
+[ext_resource type="PackedScene" uid="uid://utrrnss8gijb" path="res://scenes/personagem.tscn" id="3_1b3iq"]
+
 [node name="Jogo" type="Node2D" unique_id=1912380566]
+
+[node name="background" type="Node" parent="." unique_id=544635794]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="background" unique_id=117790556]
+
+[node name="Z1Gd2Kwa4a361" type="Sprite2D" parent="background" unique_id=674380337]
+show_behind_parent = true
+position = Vector2(0, -1)
+scale = Vector2(0.273743, 0.273743)
+texture = ExtResource("2_sq8yp")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1417419981]
+top_level = true
+position = Vector2(3, -1)
+zoom = Vector2(3, 3)
+
+[node name="personagem" parent="." unique_id=1795360247 instance=ExtResource("3_1b3iq")]
+top_level = true
+light_mask = 2
+visibility_layer = 2
+position = Vector2(0, -1)
