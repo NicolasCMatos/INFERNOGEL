@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://0y8tqialgadj"]
+
+[ext_resource type="Script" uid="uid://bk1heclydhpta" path="res://scripts/box.gd" id="1_ks2v0"]
+[ext_resource type="Texture2D" uid="uid://kyjdx4bnkjab" path="res://assets/tileset_legacy.png" id="2_c2ln5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_telwu"]
+size = Vector2(16, 16)
+
+[node name="box" type="CharacterBody2D" unique_id=1739976668]
+script = ExtResource("1_ks2v0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=743395687]
+shape = SubResource("RectangleShape2D_telwu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1792765376]
+texture = ExtResource("2_c2ln5")
+region_enabled = true
+region_rect = Rect2(221, 272, 16, 16)
+
+[node name="up" type="RayCast2D" parent="." unique_id=866996371]
+position = Vector2(0, -8)
+target_position = Vector2(0, -8)
+hit_from_inside = true
+
+[node name="down" type="RayCast2D" parent="." unique_id=1804963547]
+position = Vector2(0, 8)
+target_position = Vector2(0, 8)
+hit_from_inside = true
+
+[node name="left" type="RayCast2D" parent="." unique_id=1270577745]
+position = Vector2(-8, 0)
+target_position = Vector2(-8, 0)
+hit_from_inside = true
+
+[node name="right" type="RayCast2D" parent="." unique_id=954173253]
+position = Vector2(8, 0)
+target_position = Vector2(8, 0)
+hit_from_inside = true
