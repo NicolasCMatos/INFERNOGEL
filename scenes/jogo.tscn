@@ -1130,7 +1130,7 @@ texture = ExtResource("2_1b3iq")
 top_level = true
 light_mask = 6
 visibility_layer = 2
-position = Vector2(1228, 504)
+position = Vector2(1224, 504)
 
 [node name="Camera2D" type="Camera2D" parent="personagem" unique_id=1961931345]
 zoom = Vector2(4.625, 4.625)
@@ -1152,92 +1152,94 @@ debug_color = Color(0, 0.6, 0.69803923, 1)
 position = Vector2(615.5, -106)
 shape = SubResource("RectangleShape2D_1b3iq")
 
-[node name="Buraco" parent="." unique_id=221059534 instance=ExtResource("4_k05ng")]
+[node name="Buracos" type="Node" parent="." unique_id=446062956]
+
+[node name="Buraco" parent="Buracos" unique_id=221059534 instance=ExtResource("4_k05ng")]
 position = Vector2(1272, 441)
 
-[node name="Buraco2" parent="." unique_id=280525006 instance=ExtResource("4_k05ng")]
+[node name="Buraco2" parent="Buracos" unique_id=280525006 instance=ExtResource("4_k05ng")]
 position = Vector2(1256, 424)
 
-[node name="Buraco3" parent="." unique_id=705960151 instance=ExtResource("4_k05ng")]
+[node name="Buraco3" parent="Buracos" unique_id=705960151 instance=ExtResource("4_k05ng")]
 position = Vector2(1240, 424)
 
-[node name="Buraco4" parent="." unique_id=1650308428 instance=ExtResource("4_k05ng")]
+[node name="Buraco4" parent="Buracos" unique_id=1650308428 instance=ExtResource("4_k05ng")]
 position = Vector2(1208, 440)
 
-[node name="Buraco5" parent="." unique_id=1343252591 instance=ExtResource("4_k05ng")]
+[node name="Buraco5" parent="Buracos" unique_id=1343252591 instance=ExtResource("4_k05ng")]
 position = Vector2(1208, 424)
 
-[node name="Buraco6" parent="." unique_id=909660804 instance=ExtResource("4_k05ng")]
+[node name="Buraco6" parent="Buracos" unique_id=909660804 instance=ExtResource("4_k05ng")]
 position = Vector2(1208, 408)
 
-[node name="Buraco7" parent="." unique_id=1356924044 instance=ExtResource("4_k05ng")]
+[node name="Buraco7" parent="Buracos" unique_id=1356924044 instance=ExtResource("4_k05ng")]
 position = Vector2(1240, 408)
 
-[node name="Buraco8" parent="." unique_id=1190134216 instance=ExtResource("4_k05ng")]
+[node name="Buraco8" parent="Buracos" unique_id=1190134216 instance=ExtResource("4_k05ng")]
 position = Vector2(1257, 392)
 
-[node name="Buraco9" parent="." unique_id=2077756347 instance=ExtResource("4_k05ng")]
+[node name="Buraco9" parent="Buracos" unique_id=2077756347 instance=ExtResource("4_k05ng")]
 position = Vector2(1272, 391)
 
-[node name="Buraco10" parent="." unique_id=2019111865 instance=ExtResource("4_k05ng")]
+[node name="Buraco10" parent="Buracos" unique_id=2019111865 instance=ExtResource("4_k05ng")]
 position = Vector2(1191, 359)
 
-[node name="Buraco11" parent="." unique_id=305819714 instance=ExtResource("4_k05ng")]
+[node name="Buraco11" parent="Buracos" unique_id=305819714 instance=ExtResource("4_k05ng")]
 position = Vector2(1208, 375)
 
-[node name="Buraco12" parent="." unique_id=497914877 instance=ExtResource("4_k05ng")]
+[node name="Buraco12" parent="Buracos" unique_id=497914877 instance=ExtResource("4_k05ng")]
 position = Vector2(1223, 376)
 
-[node name="Buraco13" parent="." unique_id=2134302008 instance=ExtResource("4_k05ng")]
+[node name="Buraco13" parent="Buracos" unique_id=2134302008 instance=ExtResource("4_k05ng")]
 position = Vector2(1208, 360)
 
-[node name="Buraco14" parent="." unique_id=1425691120 instance=ExtResource("4_k05ng")]
+[node name="Buraco14" parent="Buracos" unique_id=1425691120 instance=ExtResource("4_k05ng")]
 position = Vector2(1224, 361)
 
-[node name="Buraco15" parent="." unique_id=1962897287 instance=ExtResource("4_k05ng")]
+[node name="Buraco15" parent="Buracos" unique_id=1962897287 instance=ExtResource("4_k05ng")]
 position = Vector2(1256, 361)
 
-[node name="Buraco16" parent="." unique_id=939662929 instance=ExtResource("4_k05ng")]
+[node name="Buraco16" parent="Buracos" unique_id=939662929 instance=ExtResource("4_k05ng")]
 position = Vector2(1209, 329)
 
-[node name="Buraco17" parent="." unique_id=2071494961 instance=ExtResource("4_k05ng")]
+[node name="Buraco17" parent="Buracos" unique_id=2071494961 instance=ExtResource("4_k05ng")]
 position = Vector2(1208, 312)
 
-[node name="Buraco18" parent="." unique_id=1464957757 instance=ExtResource("4_k05ng")]
+[node name="Buraco18" parent="Buracos" unique_id=1464957757 instance=ExtResource("4_k05ng")]
 position = Vector2(1224, 329)
 
-[node name="Buraco19" parent="." unique_id=459725043 instance=ExtResource("4_k05ng")]
+[node name="Buraco19" parent="Buracos" unique_id=459725043 instance=ExtResource("4_k05ng")]
 position = Vector2(1240, 327)
 
-[node name="Buraco20" parent="." unique_id=215616339 instance=ExtResource("4_k05ng")]
+[node name="Buraco20" parent="Buracos" unique_id=215616339 instance=ExtResource("4_k05ng")]
 position = Vector2(1255, 328)
 
-[node name="Buraco21" parent="." unique_id=590511743 instance=ExtResource("4_k05ng")]
+[node name="Buraco21" parent="Buracos" unique_id=590511743 instance=ExtResource("4_k05ng")]
 position = Vector2(1255, 344)
 
-[node name="Buraco22" parent="." unique_id=134972468 instance=ExtResource("4_k05ng")]
+[node name="Buraco22" parent="Buracos" unique_id=134972468 instance=ExtResource("4_k05ng")]
 position = Vector2(1240, 296)
 
-[node name="Buraco23" parent="." unique_id=2040949027 instance=ExtResource("4_k05ng")]
+[node name="Buraco23" parent="Buracos" unique_id=2040949027 instance=ExtResource("4_k05ng")]
 position = Vector2(1207, 279)
 
-[node name="Buraco24" parent="." unique_id=2026164308 instance=ExtResource("4_k05ng")]
+[node name="Buraco24" parent="Buracos" unique_id=2026164308 instance=ExtResource("4_k05ng")]
 position = Vector2(1191, 280)
 
-[node name="Buraco25" parent="." unique_id=617874516 instance=ExtResource("4_k05ng")]
+[node name="Buraco25" parent="Buracos" unique_id=617874516 instance=ExtResource("4_k05ng")]
 position = Vector2(1192, 264)
 
-[node name="Buraco26" parent="." unique_id=334238124 instance=ExtResource("4_k05ng")]
+[node name="Buraco26" parent="Buracos" unique_id=334238124 instance=ExtResource("4_k05ng")]
 position = Vector2(1240, 281)
 
-[node name="Buraco27" parent="." unique_id=226732830 instance=ExtResource("4_k05ng")]
+[node name="Buraco27" parent="Buracos" unique_id=226732830 instance=ExtResource("4_k05ng")]
 position = Vector2(1256, 280)
 
-[node name="Buraco28" parent="." unique_id=1692284481 instance=ExtResource("4_k05ng")]
+[node name="Buraco28" parent="Buracos" unique_id=1692284481 instance=ExtResource("4_k05ng")]
 position = Vector2(1256, 264)
 
-[node name="Buraco29" parent="." unique_id=66542740 instance=ExtResource("4_k05ng")]
+[node name="Buraco29" parent="Buracos" unique_id=66542740 instance=ExtResource("4_k05ng")]
 position = Vector2(1257, 297)
 
-[node name="Buraco30" parent="." unique_id=189509262 instance=ExtResource("4_k05ng")]
+[node name="Buraco30" parent="Buracos" unique_id=189509262 instance=ExtResource("4_k05ng")]
 position = Vector2(1272, 296)
