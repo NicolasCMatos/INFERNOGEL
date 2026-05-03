@@ -1,27 +1,58 @@
 extends CharacterBody2D
 
-#Tamanho dos bloquinho do mapa
-const tile_size : Vector2 = Vector2(16, 16)
-# Movimento lisooo
-var sprite_node_pos_tween: Tween
+# Tamanho dos bloquinhos do mapa
+const tilesize = 16
 
-func _physics_process(	delta: float) -> void:
-	if !sprite_node_pos_tween or !sprite_node_pos_tween.is_running():
-		if Input.is_action_pressed("ui_up") and !$up.is_colliding():
-			_move(Vector2(0, -1))
-		elif Input.is_action_pressed("ui_down") and !$down.is_colliding():
-			_move(Vector2(0, 1))
-		elif Input.is_action_pressed("ui_left") and !$left.is_colliding():
-			_move(Vector2(-1, 0))
-		elif Input.is_action_pressed("ui_right") and !$right.is_colliding():
-			_move(Vector2(1, 0))
+@onready var ray: RayCast2D = $Ray
 
-func _move(dir: Vector2):
-	global_position += dir * tile_size
-	$Sprite2D.global_position -= dir * tile_size
+var inputs = {
+	"move_up": Vector2.UP,
+	"move_down": Vector2.DOWN,
+	"move_left": Vector2.LEFT,
+	"move_right": Vector2.RIGHT,
+}
+
+# Controle de movimento contínuo
+var move_delay = 0.15
+var move_timer = 0.0
+var is_moving = false
+
+func _physics_process(delta):
+	move_timer -= delta
 	
-	if sprite_node_pos_tween:
-		sprite_node_pos_tween.kill()
-	sprite_node_pos_tween = create_tween()
-	sprite_node_pos_tween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
-	sprite_node_pos_tween.tween_property($Sprite2D, "global_position", global_position, 0.185).set_trans(Tween.TRANS_SINE)
+	# Evita spam enquanto ainda está no tempo de espera
+	if move_timer > 0 or is_moving:
+		return
+	
+	for dir in inputs.keys():
+		if Input.is_action_pressed(dir):
+			move(dir)
+			move_timer = move_delay
+			break
+
+
+func move(dir):
+	var vector_pos = inputs[dir] * tilesize
+	
+	ray.target_position = vector_pos
+	ray.force_raycast_update()
+	
+	if not ray.is_colliding():
+		is_moving = true
+		
+		var tween = create_tween()
+		tween.tween_property(self, "position", position + vector_pos, 0.1)
+		tween.finished.connect(_on_move_finished)
+		
+		animation()
+
+
+func _on_move_finished():
+	is_moving = false
+
+
+func animation():
+	var tween = create_tween()
+	tween.tween_property(self, "scale", Vector2(1.1, 0.9), 0.05)
+	tween.tween_property(self, "scale", Vector2(0.9, 1.1), 0.05)
+	tween.tween_property(self, "scale", Vector2(1, 1), 0.05)
