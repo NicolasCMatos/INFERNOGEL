@@ -50,9 +50,16 @@ func move(dir):
 func _on_move_finished():
 	is_moving = false
 
-
 func animation():
 	var tween = create_tween()
 	tween.tween_property(self, "scale", Vector2(1.1, 0.9), 0.05)
 	tween.tween_property(self, "scale", Vector2(0.9, 1.1), 0.05)
 	tween.tween_property(self, "scale", Vector2(1, 1), 0.05)
+	
+#Lista para guardar os itens coletados
+var inventory: Array[String] = []
+
+#Guarda a referência do objeto interativo que está mais próximo
+var current_interactive = null
+
+@onready var interaction_detector = $InteractionDetector 

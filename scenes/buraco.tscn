@@ -6,15 +6,17 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_br1es"]
 radius = 8.0
 
-[node name="Buraco" type="Node2D" unique_id=221059534]
+[node name="Buraco" type="Node2D" unique_id=455010323]
 
-[node name="buraquito" type="Area2D" parent="." unique_id=1148387492]
+[node name="buraquito" type="Area2D" parent="." unique_id=961075913]
 script = ExtResource("1_br1es")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="buraquito" unique_id=600596719]
-shape = SubResource("CircleShape2D_br1es")
 
 [node name="Sprite2D" type="Sprite2D" parent="buraquito" unique_id=2043032973]
 texture = ExtResource("2_usxml")
 region_enabled = true
 region_rect = Rect2(493, 238, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="buraquito" unique_id=600596719]
+shape = SubResource("CircleShape2D_br1es")
+
+[connection signal="body_entered" from="buraquito" to="buraquito" method="_on_body_entered"]
