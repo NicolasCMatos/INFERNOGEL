@@ -3,6 +3,7 @@ extends CharacterBody2D
 # Tamanho dos bloquinhos do mapa
 const tilesize = 16
 
+var spawn_point = Vector2.ZERO
 @onready var ray: RayCast2D = $Ray
 
 var inputs = {
@@ -63,3 +64,22 @@ var inventory: Array[String] = []
 var current_interactive = null
 
 @onready var interaction_detector = $InteractionDetector 
+
+#salvar checkpoint
+func set_checkpoint(pos):
+	spawn_point = pos
+
+
+func spawn_player():
+
+	if spawn_point == Vector2.ZERO:
+		get_tree().reload_current_scene()
+		return
+
+	set_collision_layer_value(1, false)
+
+	global_position = spawn_point
+
+	await get_tree().create_timer(0.2).timeout
+
+	set_collision_layer_value(1, true)

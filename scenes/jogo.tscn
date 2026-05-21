@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://uu6mo17hvq6w" path="res://scenes/interactiondetector.gd" id="6_drirx"]
 [ext_resource type="Script" uid="uid://uiyefc86vsjk" path="res://scenes/area_2d.gd" id="7_ogo8m"]
 [ext_resource type="PackedScene" uid="uid://cbdjc6xxyj5gd" path="res://scenes/door.tscn" id="9_gsaar"]
+[ext_resource type="PackedScene" uid="uid://c8ukxae5m8lse" path="res://scenes/checkpoint.tscn" id="11_qbbxf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sq8yp"]
 texture = ExtResource("1_sq8yp")
@@ -1139,7 +1140,6 @@ size = Vector2(96, 238)
 [node name="Level1" type="Node2D" unique_id=1912380566]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1255727566]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="background" type="Node" parent="." unique_id=544635794]
@@ -1170,9 +1170,10 @@ z_index = 5
 position = Vector2(1224, 504)
 
 [node name="PointLight2D" type="PointLight2D" parent="personagem" unique_id=726259721]
-position = Vector2(-1.5258789e-05, 0)
-scale = Vector2(4.476563, 4.476563)
+position = Vector2(-7.6293945e-06, -7.6293945e-06)
+scale = Vector2(7.3632817, 7.3632817)
 color = Color(0.6983959, 0.50391936, 0.49842656, 1)
+energy = 1.27
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_4sjka")
 
@@ -1323,6 +1324,16 @@ shape = SubResource("RectangleShape2D_8i8hp")
 
 [node name="o sonho do checkpoint" type="Marker2D" parent="." unique_id=1771331900]
 position = Vector2(1240, 492)
+
+[node name="checkpoints" type="Node2D" parent="." unique_id=550608849]
+
+[node name="checkpoint" parent="checkpoints" unique_id=1073134361 instance=ExtResource("11_qbbxf")]
+top_level = true
+position = Vector2(1192, 504)
+
+[node name="checkpoint2" parent="checkpoints" unique_id=1785756784 instance=ExtResource("11_qbbxf")]
+top_level = true
+position = Vector2(1224, 216)
 
 [connection signal="area_entered" from="personagem/interactiondetector" to="background/Door" method="_on_interactiondetector_area_entered"]
 [connection signal="body_entered" from="Buracos" to="Buracos" method="_on_body_entered"]

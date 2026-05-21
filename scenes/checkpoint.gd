@@ -1,15 +1,16 @@
 extends Area2D
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+@export var spawn_marker: Marker2D
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 
 func _on_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+
+	if body.is_in_group("player"):
+
+		print("entrou")
+
+		if body.has_method("set_checkpoint"):
+
+			body.set_checkpoint(spawn_marker.global_position)
