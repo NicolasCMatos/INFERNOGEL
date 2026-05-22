@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://ckqovr4t2srkl"]
+
+[ext_resource type="Texture2D" uid="uid://chptill147rl" path="res://scenes/sprites cursores olho aberto.jpg" id="1_yk2u2"]
+
+[sub_resource type="GDScript" id="GDScript_ndie3"]
+script/source = "extends Area2D
+
+@export var nome_do_item: String = \"chave_misteriosa\"
+
+func _ready() -> void:
+	# Garante que a chave está no grupo correto
+	add_to_group(\"chaves\")
+
+func ser_coletada() -> void:
+	print(\"Chave \", nome_do_item, \" foi deletada do mapa.\")
+	
+	# Avisa a porta automática (se estiver usando o Eventos.gd)
+	if has_node(\"/root/Eventos\"):
+		get_node(\"/root/Eventos\").chave_coletada.emit(nome_do_item)
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yk2u2"]
+radius = 26.925823
+
+[node name="key" type="Area2D" unique_id=1043650577]
+position = Vector2(1, 0)
+script = SubResource("GDScript_ndie3")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1279402429]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1874789610]
+shape = SubResource("CircleShape2D_yk2u2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1284302169]
+rotation = -3.1415925
+scale = Vector2(0.07185608, -0.06811241)
+texture = ExtResource("1_yk2u2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

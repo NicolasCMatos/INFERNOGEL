@@ -1,4 +1,6 @@
 extends CharacterBody2D
+class_name Jogador
+
 
 # Tamanho dos bloquinhos do mapa
 const tilesize = 16
@@ -83,3 +85,18 @@ func spawn_player():
 	await get_tree().create_timer(0.2).timeout
 
 	set_collision_layer_value(1, true)
+	
+	#inventario bbs
+var inventario: Array=[]
+var chave_proxima: Area2D = null
+func _ready() -> void:
+	pass
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("interagir"):
+		if chave_proxima != null:
+			coletar_item(chave_proxima.nome_do_item)
+			chave_proxima.ser_coletada()
+			chave_proxima= null
+func coletar_item (nome_do_item: String)-> void:
+	inventario.append(nome_do_item)
+	print ("sucesso absoluto!Item no inventario:",inventario)

@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bfp16ryhnnajj"]
+
+[ext_resource type="Script" uid="uid://cebtojlglsjmm" path="res://scenes/quebra_cabeça.gd" id="1_oa2vr"]
+[ext_resource type="Script" uid="uid://cn1bmnuerklbk" path="res://scenes/texture_button.gd" id="2_5e7xl"]
+[ext_resource type="Texture2D" uid="uid://dsddxjikbw7v0" path="res://assets/sprites cursores olho aberto aa.jpg" id="2_v3fgo"]
+[ext_resource type="Texture2D" uid="uid://b61t6fbdqvkp8" path="res://assets/sprites cursores olho aberto a.jpg" id="4_kfcr4"]
+
+[node name="QuebraCabeça" type="Control" unique_id=1368787867]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_oa2vr")
+
+[node name="espaços" type="Control" parent="." unique_id=1298359625]
+anchors_preset = 0
+offset_left = 46.0
+offset_top = 15.0
+offset_right = 86.0
+offset_bottom = 55.0
+
+[node name="posiçao1" type="Marker2D" parent="espaços" unique_id=1877682498]
+position = Vector2(254, 289)
+
+[node name="posição2" type="Marker2D" parent="espaços" unique_id=992227139]
+position = Vector2(498, 305)
+
+[node name="peças" type="Control" parent="." unique_id=794891667]
+anchors_preset = 0
+offset_left = 94.0
+offset_top = 13.0
+offset_right = 134.0
+offset_bottom = 53.0
+
+[node name="TextureButton" type="TextureButton" parent="peças" unique_id=684031495]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 44.0
+offset_right = 324.0
+offset_bottom = 533.0
+texture_normal = ExtResource("2_v3fgo")
+script = ExtResource("2_5e7xl")
+
+[node name="TextureButton2" type="TextureButton" parent="peças" unique_id=30170665]
+layout_mode = 0
+offset_left = 325.0
+offset_top = 42.0
+offset_right = 552.0
+offset_bottom = 531.0
+texture_normal = ExtResource("4_kfcr4")
+script = ExtResource("2_5e7xl")
