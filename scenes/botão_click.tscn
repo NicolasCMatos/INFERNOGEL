@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bpjykep2i8qjq"]
+
+[ext_resource type="Script" uid="uid://bftwlpxehi3bs" path="res://scripts/botão_click.gd" id="1_jnsjb"]
+[ext_resource type="Texture2D" uid="uid://kyjdx4bnkjab" path="res://assets/tileset_legacy.png" id="2_kf24t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uaejf"]
+size = Vector2(16, 16)
+
+[node name="botão click" type="Area2D" unique_id=2004365323]
+script = ExtResource("1_jnsjb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1205631046]
+texture = ExtResource("2_kf24t")
+region_enabled = true
+region_rect = Rect2(459, 340, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=518445308]
+shape = SubResource("RectangleShape2D_uaejf")

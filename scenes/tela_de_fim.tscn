@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://by4b2ttvhrk0s"]
+
+[ext_resource type="FontFile" uid="uid://c6jpdlst1tpor" path="res://assets/PixelifySans-Regular.ttf" id="1_es0yr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_iu0ay"]
+font = ExtResource("1_es0yr")
+font_size = 100
+
+[node name="Tela de fim" type="Node2D" unique_id=477940692]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1689386300]
+offset_left = -624.0
+offset_top = -336.0
+offset_right = 656.0
+offset_bottom = 336.0
+color = Color(0.09401447, 0.042046666, 0.100838, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=548140116]
+
+[node name="Label" type="Label" parent="." unique_id=1836667360]
+offset_left = -336.0
+offset_top = -72.0
+offset_right = 331.0
+offset_bottom = 48.0
+text = "Eba ganhouuu"
+label_settings = SubResource("LabelSettings_iu0ay")

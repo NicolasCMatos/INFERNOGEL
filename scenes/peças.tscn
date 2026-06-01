@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c205mlircdb7k"]
+
+[ext_resource type="Script" uid="uid://b5vfhxxfwqeby" path="res://scripts/area_2d.gd" id="1_k8db5"]
+[ext_resource type="Texture2D" uid="uid://kyjdx4bnkjab" path="res://assets/tileset_legacy.png" id="2_16sel"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cb0fg"]
+radius = 8.0
+
+[node name="Peças" type="Area2D" unique_id=882493798]
+script = ExtResource("1_k8db5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1241027052]
+texture = ExtResource("2_16sel")
+region_enabled = true
+region_rect = Rect2(289, 459, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1532541748]
+shape = SubResource("CircleShape2D_cb0fg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

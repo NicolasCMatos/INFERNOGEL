@@ -7,43 +7,61 @@
 
 [node name="QuebraCabeça" type="Control" unique_id=1368787867]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 344.0
+offset_top = 4.0
+offset_right = 344.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_oa2vr")
 
-[node name="espaços" type="Control" parent="." unique_id=1298359625]
+[node name="EspacosCorretos" type="Control" parent="." unique_id=1298359625]
+layout_mode = 1
 anchors_preset = 0
-offset_left = 46.0
-offset_top = 15.0
-offset_right = 86.0
-offset_bottom = 55.0
 
-[node name="posiçao1" type="Marker2D" parent="espaços" unique_id=1877682498]
-position = Vector2(254, 289)
+[node name="posiçao1" type="Marker2D" parent="EspacosCorretos" unique_id=1877682498]
+position = Vector2(-72, -2)
 
-[node name="posição2" type="Marker2D" parent="espaços" unique_id=992227139]
-position = Vector2(498, 305)
+[node name="posição2" type="Marker2D" parent="EspacosCorretos" unique_id=992227139]
+position = Vector2(100, -2)
 
-[node name="peças" type="Control" parent="." unique_id=794891667]
+[node name="Pecas" type="Control" parent="." unique_id=794891667]
+layout_mode = 1
 anchors_preset = 0
-offset_left = 94.0
-offset_top = 13.0
-offset_right = 134.0
-offset_bottom = 53.0
 
-[node name="TextureButton" type="TextureButton" parent="peças" unique_id=684031495]
+[node name="TextureButton" type="TextureButton" parent="Pecas" unique_id=684031495]
 layout_mode = 0
-offset_left = 99.0
-offset_top = 44.0
-offset_right = 324.0
-offset_bottom = 533.0
+offset_left = -224.0
+offset_top = -256.0
+offset_right = 1.0
+offset_bottom = 233.0
 texture_normal = ExtResource("2_v3fgo")
 script = ExtResource("2_5e7xl")
 
-[node name="TextureButton2" type="TextureButton" parent="peças" unique_id=30170665]
+[node name="TextureButton2" type="TextureButton" parent="Pecas" unique_id=30170665]
 layout_mode = 0
-offset_left = 325.0
-offset_top = 42.0
-offset_right = 552.0
-offset_bottom = 531.0
+offset_top = -256.0
+offset_right = 227.0
+offset_bottom = 233.0
 texture_normal = ExtResource("4_kfcr4")
 script = ExtResource("2_5e7xl")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=741849070]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -12.0
+offset_right = 16.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 1, 1)

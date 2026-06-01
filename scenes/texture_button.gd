@@ -5,7 +5,7 @@ extends TextureButton
 var arrastando: bool = false
 var offset_mouse: Vector2 = Vector2.ZERO
 
-var distancia_encaixe: float = 30.0
+var distancia_encaixe: float = 100.0
 var ja_encaixou: bool = false
 
 func _ready() -> void:
@@ -14,6 +14,7 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	if arrastando and not ja_encaixou:
+		# Garante que ele segue o mouse na coordenada global da tela
 		global_position = get_global_mouse_position() - offset_mouse
 
 func _on_button_down() -> void:
@@ -25,6 +26,8 @@ func _on_button_down() -> void:
 func _on_button_up() -> void:
 	if arrastando:
 		arrastando = false
+		# PRINT DE TESTE: Mostra a distância atual até o objetivo
+		print(name, " soltada. Distância até o encaixe: ", global_position.distance_to(posicao_correta))
 		verificar_encaixe()
 
 func verificar_encaixe() -> void:
@@ -33,4 +36,13 @@ func verificar_encaixe() -> void:
 		ja_encaixou = true
 		disabled = true 
 		print(name, " encaixada perfeitamente!")
-		get_parent().get_parent().checar_vitoria()
+		
+		# Procura o nó principal do puzzle subindo na árvore de nós
+		var pai = get_parent()
+		while pai and not pai.has_method("checar_vitoria"):
+			pai = pai.get_parent()
+			
+		if pai:
+			pai.checar_vitoria()
+		else:
+			print("ERRO: Não encontrei o script principal do Quebra-Cabeça acima desta peça!")
