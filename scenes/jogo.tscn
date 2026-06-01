@@ -1176,11 +1176,10 @@ offset_left = 8.0
 offset_top = 8.0
 offset_right = 95.0
 offset_bottom = 31.0
-text = "Peças: 0/12"
+text = "Peças: 0/9"
 label_settings = SubResource("LabelSettings_avosf")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1255727566]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="background" type="Node" parent="." unique_id=544635794]
@@ -1227,7 +1226,6 @@ shape = SubResource("RectangleShape2D_1b3iq")
 [node name="Sombras" type="Node" parent="." unique_id=588245047]
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Sombras" unique_id=1125356076]
-visible = false
 occluder = SubResource("OccluderPolygon2D_k05ng")
 occluder_light_mask = 3
 
@@ -1353,10 +1351,9 @@ position = Vector2(1224, 216)
 [node name="personagem" parent="." unique_id=1795360247 groups=["player"] instance=ExtResource("3_1b3iq")]
 top_level = true
 z_index = 5
-position = Vector2(1224, 504)
+position = Vector2(1260, 516)
 
 [node name="PointLight2D" type="PointLight2D" parent="personagem" unique_id=726259721]
-visible = false
 position = Vector2(-7.6293945e-06, -7.6293945e-06)
 scale = Vector2(7.3632817, 7.3632817)
 color = Color(0.6983959, 0.50391936, 0.49842656, 1)

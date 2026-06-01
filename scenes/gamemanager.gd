@@ -5,4 +5,4 @@ var peças = 0
 
 func add_peça():
 	peças += 1
-	peças_label.text = "Peças:" + str(peças) + '/12'
+	peças_label.text = "Peças:" + str(peças) + '/9'
