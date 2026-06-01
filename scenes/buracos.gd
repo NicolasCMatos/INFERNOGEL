@@ -9,3 +9,23 @@ func _on_body_entered(body):
 
 func _on_personagem_ready() -> void:
 	pass # Replace with function body.
+
+
+func _on_button_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_botao_1_au_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
+
+
+func _on_botao_1_au_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.
+
+
+func _on_botao_2_au_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
+
+
+func _on_botao_2_au_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.
