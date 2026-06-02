@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c8ukxae5m8lse"]
 
 [ext_resource type="Script" uid="uid://bih4rbg2bs2l6" path="res://scenes/checkpoint.gd" id="1_yyywg"]
+[ext_resource type="Texture2D" uid="uid://dhk47035tha0e" path="res://assets/Ambiente/checkpoint.png" id="2_ywqth"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xam77"]
 size = Vector2(32, 32)
@@ -10,14 +11,14 @@ script = ExtResource("1_yyywg")
 spawn_marker = NodePath("Marker2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1724863025]
+visible = false
 shape = SubResource("RectangleShape2D_xam77")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=630019824]
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1554959501]
-offset_left = -16.0
-offset_top = -16.0
-offset_right = 16.0
-offset_bottom = 16.0
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=49698648]
+position = Vector2(5.684342e-14, 0.9999999)
+scale = Vector2(1.28125, 1.328125)
+texture = ExtResource("2_ywqth")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

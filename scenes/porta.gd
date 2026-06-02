@@ -23,4 +23,6 @@ func _unhandled_input(event: InputEvent) -> void:
 			queue_free()
 		else:
 			print("Você tenta abrir, mas está trancada e você não tem a chave.")
-	
+func abrir_porta() -> void:
+		print('a porta abriu')
+		queue_free()

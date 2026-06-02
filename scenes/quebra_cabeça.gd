@@ -10,7 +10,7 @@ func _ready() -> void:
 func iniciar_puzzle() -> void:
 	show()
 	# Força o painel a se alinhar perfeitamente com a tela do jogador
-	position = Vector2.ZERO 
+	set_anchors_and_offsets_preset(Control.PRESET_CENTER)
 	configurar_quebra_cabeca()
 
 func configurar_quebra_cabeca() -> void:

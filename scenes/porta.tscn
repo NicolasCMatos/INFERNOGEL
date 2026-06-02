@@ -3,22 +3,23 @@
 [ext_resource type="Script" uid="uid://bxpc3edw04p22" path="res://scenes/porta.gd" id="1_hlcnn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hlcnn"]
-size = Vector2(20, 67)
+size = Vector2(20, 90)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fctyj"]
-size = Vector2(20, 67)
+size = Vector2(20, 91)
 
 [node name="Porta" type="Area2D" unique_id=773321838]
 script = ExtResource("1_hlcnn")
+item_necessario = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1537124673]
-position = Vector2(0, 23.5)
+position = Vector2(0, 12)
 shape = SubResource("RectangleShape2D_hlcnn")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=588402989]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1398091154]
-position = Vector2(0, 23.5)
+position = Vector2(0, 11.5)
 shape = SubResource("RectangleShape2D_fctyj")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
