@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://c31htpg0ikmlt"]
+
+[ext_resource type="Script" uid="uid://o0pu0icnhhhe" path="res://scenes/menu_inicial.gd" id="1_1lqws"]
+[ext_resource type="FontFile" uid="uid://c6jpdlst1tpor" path="res://assets/PixelifySans-Regular.ttf" id="1_40mju"]
+[ext_resource type="Shader" uid="uid://cdmy2yw8oystt" path="res://screen effect/jogo.gdshader" id="3_eg8ak"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1lqws"]
+bg_color = Color(0.32941177, 0.12941177, 0.1882353, 0.5882353)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6431373, 0.27450982, 0.42745098, 0.7607843)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_40mju"]
+bg_color = Color(0.17931378, 0.056765765, 0.09291851, 0.5882353)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6431373, 0.27450982, 0.42745098, 0.7607843)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eg8ak"]
+bg_color = Color(0.6431373, 0.27450982, 0.42745098, 0.7607843)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6431373, 0.27450982, 0.42745098, 0.7607843)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nn1uv"]
+shader = ExtResource("3_eg8ak")
+
+[sub_resource type="QuadMesh" id="QuadMesh_twj80"]
+size = Vector2(1920, 1080)
+center_offset = Vector3(960, 540, 0)
+
+[node name="Menu inicial" type="Control" unique_id=1268447418]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1lqws")
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=905749594]
+layout_mode = 0
+offset_right = 1968.0
+offset_bottom = 1128.0
+color = Color(0.106487505, 9.686314e-07, 0.071167715, 1)
+
+[node name="Label" type="Label" parent="." unique_id=322257018]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -543.0
+offset_top = 144.0
+offset_right = 543.0
+offset_bottom = 375.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0.6793528, 0.17471242, 0.34649867, 1)
+theme_override_constants/shadow_offset_y = 7
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("1_40mju")
+theme_override_font_sizes/font_size = 192
+text = "INFERNOGEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1341605567]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -268.8
+offset_top = -48.0
+offset_right = 268.80005
+offset_bottom = 336.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+theme_override_constants/separation = 15
+
+[node name="INICIAR" type="Button" parent="VBoxContainer" unique_id=1170681529]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_40mju")
+theme_override_font_sizes/font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxFlat_1lqws")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_40mju")
+theme_override_styles/hover = SubResource("StyleBoxFlat_eg8ak")
+text = "INICIAR"
+
+[node name="OPÇÕES" type="Button" parent="VBoxContainer" unique_id=1003490084]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_40mju")
+theme_override_font_sizes/font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxFlat_1lqws")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_40mju")
+theme_override_styles/hover = SubResource("StyleBoxFlat_eg8ak")
+text = "OPÇÕES"
+
+[node name="SAIR" type="Button" parent="VBoxContainer" unique_id=819558646]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_40mju")
+theme_override_font_sizes/font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxFlat_1lqws")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_40mju")
+theme_override_styles/hover = SubResource("StyleBoxFlat_eg8ak")
+text = "SAIR"
+
+[node name="Crt shader" type="CanvasLayer" parent="." unique_id=1851947578]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Crt shader" unique_id=1606512484]
+material = SubResource("ShaderMaterial_nn1uv")
+mesh = SubResource("QuadMesh_twj80")
+
+[connection signal="pressed" from="VBoxContainer/INICIAR" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="VBoxContainer/OPÇÕES" to="." method="_on_opções_pressed"]
+[connection signal="pressed" from="VBoxContainer/SAIR" to="." method="_on_sair_pressed"]

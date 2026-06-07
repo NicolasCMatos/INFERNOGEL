@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://c0druoddmbfb4"]
+
+[ext_resource type="Script" uid="uid://cg0243lle3kix" path="res://scenes/menu_de_pausa.gd" id="1_db0ge"]
+[ext_resource type="FontFile" uid="uid://c6jpdlst1tpor" path="res://assets/PixelifySans-Regular.ttf" id="2_kthxl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_losnk"]
+bg_color = Color(0.32941177, 0.12941177, 0.1882353, 0.5882353)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6431373, 0.27450982, 0.42745098, 0.7607843)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8yxbo"]
+bg_color = Color(0.17931378, 0.056765765, 0.09291851, 0.5882353)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6431373, 0.27450982, 0.42745098, 0.7607843)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sxrye"]
+bg_color = Color(0.6431373, 0.27450982, 0.42745098, 0.7607843)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6431373, 0.27450982, 0.42745098, 0.7607843)
+
+[node name="Menu de pausa" type="CanvasLayer" unique_id=715896431]
+process_mode = 3
+script = ExtResource("1_db0ge")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=208296905]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -996.0
+offset_top = -552.0
+offset_right = 1056.0
+offset_bottom = 600.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08322439, 5.6403223e-07, 0.051383927, 0.47058824)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=460863389]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -264.0
+offset_top = -159.0
+offset_right = 264.0
+offset_bottom = 159.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="Voltar" type="Button" parent="VBoxContainer" unique_id=1741416646]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_kthxl")
+theme_override_font_sizes/font_size = 51
+theme_override_styles/normal = SubResource("StyleBoxFlat_losnk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8yxbo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sxrye")
+text = "VOLTAR"
+
+[node name="Sair" type="Button" parent="VBoxContainer" unique_id=2073073035]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_kthxl")
+theme_override_font_sizes/font_size = 51
+theme_override_styles/normal = SubResource("StyleBoxFlat_losnk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8yxbo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sxrye")
+text = "SAIR"
+
+[connection signal="pressed" from="VBoxContainer/Voltar" to="." method="_on_voltar_pressed"]
+[connection signal="pressed" from="VBoxContainer/Sair" to="." method="_on_sair_pressed"]

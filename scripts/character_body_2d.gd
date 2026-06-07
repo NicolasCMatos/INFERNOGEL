@@ -3,7 +3,7 @@ class_name Jogador
 
 
 # Tamanho dos bloquinhos do mapa
-const tilesize = 16
+const tilesize = 24
 
 var spawn_point = Vector2.ZERO
 @onready var ray: RayCast2D = $Ray
