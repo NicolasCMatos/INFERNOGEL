@@ -5,7 +5,8 @@ extends Area2D
 @onready var puzzle_ui: Control = $"../CanvasLayer/QuebraCabeça"
 @export var gamemanager: Node
 @export var pecas_necessarias: int = 9  #quantidade de peças para liberar o botão
-	
+@onready var vazio: Sprite2D = $vazio
+
 func _ready() -> void:
 	if gamemanager:
 		gamemanager.pecas_atualizadas.connect(_on_pecas_atualizadas)
@@ -28,6 +29,7 @@ func _on_body_exited(body: Node2D) -> void:
 			
 func _on_pecas_atualizadas(quantidade_atual: int):
 	if quantidade_atual >= pecas_necessarias:
+		vazio.visible = false
 		monitoring = true
 		print('ativadooooo')
 	else:

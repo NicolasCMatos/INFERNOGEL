@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://buaaut2vna730"]
 
 [ext_resource type="Script" uid="uid://by046oepi55fr" path="res://scripts/buraquito.gd" id="1_br1es"]
-[ext_resource type="Texture2D" uid="uid://kyjdx4bnkjab" path="res://assets/tileset_legacy.png" id="2_usxml"]
+[ext_resource type="Texture2D" uid="uid://d01autd32o7hu" path="res://assets/Ambiente/buracos.png" id="2_usxml"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_br1es"]
-radius = 8.0
+radius = 11.0
 
 [node name="Buraco" type="Node2D" unique_id=455010323]
 
@@ -14,7 +14,7 @@ script = ExtResource("1_br1es")
 [node name="Sprite2D" type="Sprite2D" parent="buraquito" unique_id=2043032973]
 texture = ExtResource("2_usxml")
 region_enabled = true
-region_rect = Rect2(493, 238, 16, 16)
+region_rect = Rect2(0, 0, 24, 24)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="buraquito" unique_id=600596719]
 shape = SubResource("CircleShape2D_br1es")

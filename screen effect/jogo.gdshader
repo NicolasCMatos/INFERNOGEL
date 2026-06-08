@@ -1,7 +1,7 @@
 shader_type canvas_item;
 render_mode unshaded, skip_vertex_transform;
 
-const float curvature = 7.0;
+const float curvature = 5.0;
 const float vignette_multiplier = 1.0;
 
 uniform sampler2D screen_texture: hint_screen_texture, filter_linear_mipmap;
@@ -17,5 +17,5 @@ void fragment() {
 	vec3 screen_color = textureLod(screen_texture, (warped_uv + 1.0) / 2.0, 0.2).rgb * cutoff * scanlines;
 	screen_color -= vignette * vignette_multiplier;
 	//COLOR = vec4(uv_offset, 0.0, 1.0);
-	COLOR = vec4(screen_color, 0.8);
+	COLOR = vec4(screen_color, 1.0);
 }

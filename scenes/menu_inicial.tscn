@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://o0pu0icnhhhe" path="res://scenes/menu_inicial.gd" id="1_1lqws"]
 [ext_resource type="FontFile" uid="uid://c6jpdlst1tpor" path="res://assets/PixelifySans-Regular.ttf" id="1_40mju"]
 [ext_resource type="Shader" uid="uid://cdmy2yw8oystt" path="res://screen effect/jogo.gdshader" id="3_eg8ak"]
+[ext_resource type="AudioStream" uid="uid://cxht62pmt7bmg" path="res://sounds/431917__gamedog74__turning-on-lg-old-tv-Copia.ogg" id="4_nn1uv"]
+[ext_resource type="AudioStream" uid="uid://cdrk8e4tlumds" path="res://sounds/635915__earth_cord__button-push.wav" id="5_twj80"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1lqws"]
 bg_color = Color(0.32941177, 0.12941177, 0.1882353, 0.5882353)
@@ -121,6 +123,16 @@ text = "SAIR"
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Crt shader" unique_id=1606512484]
 material = SubResource("ShaderMaterial_nn1uv")
 mesh = SubResource("QuadMesh_twj80")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1983517083]
+stream = ExtResource("4_nn1uv")
+volume_db = -8.32
+pitch_scale = 0.97
+autoplay = true
+
+[node name="botao" type="AudioStreamPlayer" parent="." unique_id=726329030]
+stream = ExtResource("5_twj80")
+volume_db = -6.0
 
 [connection signal="pressed" from="VBoxContainer/INICIAR" to="." method="_on_iniciar_pressed"]
 [connection signal="pressed" from="VBoxContainer/OPÇÕES" to="." method="_on_opções_pressed"]

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cg0243lle3kix" path="res://scenes/menu_de_pausa.gd" id="1_db0ge"]
 [ext_resource type="FontFile" uid="uid://c6jpdlst1tpor" path="res://assets/PixelifySans-Regular.ttf" id="2_kthxl"]
+[ext_resource type="AudioStream" uid="uid://cdrk8e4tlumds" path="res://sounds/635915__earth_cord__button-push.wav" id="3_kthxl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_losnk"]
 bg_color = Color(0.32941177, 0.12941177, 0.1882353, 0.5882353)
@@ -78,6 +79,10 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_losnk")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_8yxbo")
 theme_override_styles/hover = SubResource("StyleBoxFlat_sxrye")
 text = "SAIR"
+
+[node name="botao" type="AudioStreamPlayer" parent="." unique_id=1248401806]
+stream = ExtResource("3_kthxl")
+volume_db = -6.0
 
 [connection signal="pressed" from="VBoxContainer/Voltar" to="." method="_on_voltar_pressed"]
 [connection signal="pressed" from="VBoxContainer/Sair" to="." method="_on_sair_pressed"]

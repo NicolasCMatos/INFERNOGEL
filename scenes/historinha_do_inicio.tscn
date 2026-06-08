@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bioa4if3suo8j"]
+
+[ext_resource type="Script" uid="uid://k28yiy2cnbkk" path="res://scripts/historinha_do_inicio.gd" id="1_qnrwi"]
+[ext_resource type="Shader" uid="uid://cdmy2yw8oystt" path="res://screen effect/jogo.gdshader" id="2_tb8nw"]
+[ext_resource type="Script" uid="uid://ci37y452d033u" path="res://scripts/crt_shader.gd" id="2_xvsu7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xvsu7"]
+shader = ExtResource("2_tb8nw")
+
+[sub_resource type="QuadMesh" id="QuadMesh_h5myw"]
+size = Vector2(1920, 1080)
+center_offset = Vector3(960, 540, 0)
+
+[node name="Historinha do inicio" type="Control" unique_id=1057479677]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qnrwi")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1681177721]
+layout_mode = 0
+offset_right = 2064.0
+offset_bottom = 1176.0
+color = Color(0.053685665, 1.2686966e-06, 0.04132794, 1)
+
+[node name="Crt shader" type="CanvasLayer" parent="." unique_id=554827623]
+script = ExtResource("2_xvsu7")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Crt shader" unique_id=346159409]
+material = SubResource("ShaderMaterial_xvsu7")
+mesh = SubResource("QuadMesh_h5myw")

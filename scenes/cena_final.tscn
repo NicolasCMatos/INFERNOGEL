@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://d1dpmoeyujlhx"]
+
+[ext_resource type="Script" uid="uid://b1v7f2bxchm4n" path="res://scripts/cena_final.gd" id="1_7mxjo"]
+[ext_resource type="Shader" uid="uid://cdmy2yw8oystt" path="res://screen effect/jogo.gdshader" id="2_0ppku"]
+[ext_resource type="Script" uid="uid://ci37y452d033u" path="res://scripts/crt_shader.gd" id="2_2vuui"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2vuui"]
+shader = ExtResource("2_0ppku")
+
+[sub_resource type="QuadMesh" id="QuadMesh_xat1p"]
+size = Vector2(1920, 1080)
+center_offset = Vector3(960, 540, 0)
+
+[node name="Cena final" type="Control" unique_id=410510982]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7mxjo")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1385195812]
+layout_mode = 0
+offset_right = 2064.0
+offset_bottom = 1176.0
+color = Color(0.053685665, 1.2686966e-06, 0.04132794, 1)
+
+[node name="Crt shader" type="CanvasLayer" parent="." unique_id=513932885]
+script = ExtResource("2_2vuui")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Crt shader" unique_id=340196214]
+material = SubResource("ShaderMaterial_2vuui")
+mesh = SubResource("QuadMesh_xat1p")
