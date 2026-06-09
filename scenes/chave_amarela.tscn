@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dsty4g54jp782"]
+
+[ext_resource type="Script" uid="uid://24j8r57xq4yb" path="res://scripts/chave_amarela.gd" id="1_ylang"]
+[ext_resource type="Texture2D" uid="uid://kyjdx4bnkjab" path="res://assets/tileset_legacy.png" id="2_8r8fw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1lib4"]
+size = Vector2(24, 24)
+
+[node name="chave amarela" type="Area2D" unique_id=1573504859]
+script = ExtResource("1_ylang")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=597533803]
+shape = SubResource("RectangleShape2D_1lib4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=313983177]
+position = Vector2(7.1525574e-07, 7.1525574e-07)
+scale = Vector2(1.4999999, 1.4999999)
+texture = ExtResource("2_8r8fw")
+region_enabled = true
+region_rect = Rect2(272, 391, 16, 16)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

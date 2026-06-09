@@ -1,5 +1,6 @@
 extends Control
 
+signal puzzle_concluido
 @onready var lista_pecas: Array = $Pecas.get_children()
 
 func _ready() -> void:
@@ -52,6 +53,7 @@ func checar_vitoria() -> void:
 		puzzle_resolvido()
 
 func puzzle_resolvido() -> void:
+	emit_signal("puzzle_concluido")
 	await get_tree().create_timer(1.5).timeout 
 	fechar_puzzle()
 

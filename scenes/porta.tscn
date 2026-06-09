@@ -1,25 +1,36 @@
 [gd_scene format=3 uid="uid://cuxqn2fretmxu"]
 
-[ext_resource type="Script" uid="uid://bxpc3edw04p22" path="res://scenes/porta.gd" id="1_hlcnn"]
+[ext_resource type="Script" uid="uid://bq8ojw4sea1fs" path="res://scripts/porta.gd" id="1_hlcnn"]
+[ext_resource type="Texture2D" uid="uid://cvm3kkuii0qru" path="res://assets/Ambiente/chao2.png" id="2_rwxfp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8gms0"]
+size = Vector2(24, 72)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hlcnn"]
-size = Vector2(20, 90)
+size = Vector2(72, 72)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fctyj"]
-size = Vector2(20, 91)
-
-[node name="Porta" type="Area2D" unique_id=773321838]
+[node name="Porta" type="Node2D" unique_id=1244499324]
 script = ExtResource("1_hlcnn")
-item_necessario = null
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1537124673]
-position = Vector2(0, 12)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1137794488]
+modulate = Color(0.9266336, 0.53688294, 1.1551381e-06, 1)
+position = Vector2(0, 24)
+scale = Vector2(1, 3)
+texture = ExtResource("2_rwxfp")
+region_enabled = true
+region_rect = Rect2(0, 0, 24, 24)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1746817314]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1223143476]
+position = Vector2(0, 24)
+shape = SubResource("RectangleShape2D_8gms0")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1831086109]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=885627250]
+position = Vector2(0, 24)
 shape = SubResource("RectangleShape2D_hlcnn")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=588402989]
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1398091154]
-position = Vector2(0, 11.5)
-shape = SubResource("RectangleShape2D_fctyj")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

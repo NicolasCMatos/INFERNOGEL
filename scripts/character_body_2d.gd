@@ -1,6 +1,6 @@
 extends CharacterBody2D
 class_name Jogador
-
+var keys = []
 
 # Tamanho dos bloquinhos do mapa
 const tilesize = 24
