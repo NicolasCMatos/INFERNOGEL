@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://utrrnss8gijb"]
 
 [ext_resource type="Script" uid="uid://h4x1g1yyvjd6" path="res://scripts/character_body_2d.gd" id="1_wtnic"]
-[ext_resource type="Texture2D" uid="uid://pil82yvk08oy" path="res://assets/imagem_2026-04-07_181110945.png" id="2_bss74"]
+[ext_resource type="Texture2D" uid="uid://pil82yvk08oy" path="res://assets/SPRITES/imagem_2026-04-07_181110945.png" id="2_bss74"]
 [ext_resource type="Texture2D" uid="uid://fmwvo0j7bn1f" path="res://assets/Fantasminha/sheet.png" id="2_en60c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hfj4i"]

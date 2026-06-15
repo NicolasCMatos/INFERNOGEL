@@ -4,7 +4,7 @@ extends Area2D
 # Garanta que o nome do nó no CanvasLayer está com a mesma acentuação (QuebraCabeça)
 @onready var puzzle_ui: Control =$"../QuebraCabeça/QuebraCabeça"
 @export var gamemanager: Node
-@export var pecas_necessarias: int = 9  #quantidade de peças para liberar o botão
+@export var pecas_necessarias: int = 1  #quantidade de peças para liberar o botão
 @onready var vazio: Sprite2D = $vazio
 
 func _ready() -> void:

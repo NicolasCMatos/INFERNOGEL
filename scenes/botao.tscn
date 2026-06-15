@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://8wbtsstf7roo"]
 
 [ext_resource type="Script" uid="uid://d3skonhuu2ihc" path="res://scripts/botao.gd" id="1_epre6"]
-[ext_resource type="Texture2D" uid="uid://kyjdx4bnkjab" path="res://assets/tileset_legacy.png" id="2_tob5m"]
+[ext_resource type="Texture2D" uid="uid://kyjdx4bnkjab" path="res://assets/SPRITES/tileset_legacy.png" id="2_tob5m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0gfik"]
 radius = 7.0

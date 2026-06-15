@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dsty4g54jp782"]
 
 [ext_resource type="Script" uid="uid://24j8r57xq4yb" path="res://scripts/chave_amarela.gd" id="1_ylang"]
-[ext_resource type="Texture2D" uid="uid://kyjdx4bnkjab" path="res://assets/tileset_legacy.png" id="2_8r8fw"]
+[ext_resource type="Texture2D" uid="uid://kyjdx4bnkjab" path="res://assets/SPRITES/tileset_legacy.png" id="2_8r8fw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1lib4"]
 size = Vector2(24, 24)

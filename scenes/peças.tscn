@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c205mlircdb7k"]
 
 [ext_resource type="Script" uid="uid://b5vfhxxfwqeby" path="res://scripts/area_2d.gd" id="1_k8db5"]
-[ext_resource type="Texture2D" uid="uid://cfnu3jvlij6ai" path="res://assets/Ambiente/quebra-cabeça.png" id="2_k8db5"]
+[ext_resource type="Texture2D" uid="uid://dvumj06xdhom4" path="res://assets/SPRITES/quebra-cabeça.png" id="2_k8db5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cb0fg"]
 radius = 8.0

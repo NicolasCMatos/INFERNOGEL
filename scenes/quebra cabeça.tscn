@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://cebtojlglsjmm" path="res://scenes/quebra_cabeça.gd" id="1_oa2vr"]
 [ext_resource type="Script" uid="uid://cn1bmnuerklbk" path="res://scenes/texture_button.gd" id="2_5e7xl"]
-[ext_resource type="Texture2D" uid="uid://dsddxjikbw7v0" path="res://assets/sprites cursores olho aberto aa.jpg" id="2_v3fgo"]
-[ext_resource type="Texture2D" uid="uid://b61t6fbdqvkp8" path="res://assets/sprites cursores olho aberto a.jpg" id="4_kfcr4"]
+[ext_resource type="Texture2D" uid="uid://dsddxjikbw7v0" path="res://assets/SPRITES/sprites cursores olho aberto aa.jpg" id="2_v3fgo"]
+[ext_resource type="Texture2D" uid="uid://b61t6fbdqvkp8" path="res://assets/SPRITES/sprites cursores olho aberto a.jpg" id="4_kfcr4"]
 
 [node name="QuebraCabeça" type="Control" unique_id=1368787867]
 layout_mode = 3
@@ -20,12 +20,28 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_oa2vr")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=741849070]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -305.5
+offset_top = -283.0
+offset_right = 305.5
+offset_bottom = 283.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 1, 1)
+
 [node name="EspacosCorretos" type="Control" parent="." unique_id=1298359625]
 layout_mode = 1
 anchors_preset = 0
 
 [node name="posiçao1" type="Marker2D" parent="EspacosCorretos" unique_id=1877682498]
 position = Vector2(-72, -2)
+gizmo_extents = 90.0
 
 [node name="posição2" type="Marker2D" parent="EspacosCorretos" unique_id=992227139]
 position = Vector2(100, -2)
@@ -35,27 +51,35 @@ layout_mode = 1
 anchors_preset = 0
 
 [node name="TextureButton" type="TextureButton" parent="Pecas" unique_id=684031495]
-layout_mode = 0
-offset_left = -296.0
-offset_top = -249.0
-offset_right = -71.0
-offset_bottom = 240.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -226.0
+offset_top = -241.0
+offset_right = -1.0
+offset_bottom = 248.0
+grow_horizontal = 2
+grow_vertical = 2
 texture_normal = ExtResource("2_v3fgo")
 script = ExtResource("2_5e7xl")
+posicao_correta = Vector2(-226, -241)
 
 [node name="TextureButton2" type="TextureButton" parent="Pecas" unique_id=30170665]
-layout_mode = 0
-offset_left = 15.0
-offset_top = -247.0
-offset_right = 242.0
-offset_bottom = 242.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = -242.0
+offset_right = 226.0
+offset_bottom = 247.0
+grow_horizontal = 2
+grow_vertical = 2
 texture_normal = ExtResource("4_kfcr4")
 script = ExtResource("2_5e7xl")
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=741849070]
-layout_mode = 1
-offset_left = 26.0
-offset_top = 220.0
-offset_right = 58.0
-offset_bottom = 241.0
-color = Color(1, 0, 1, 1)
+posicao_correta = Vector2(-1, -242)

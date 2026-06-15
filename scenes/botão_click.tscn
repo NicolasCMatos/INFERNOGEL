@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bpjykep2i8qjq"]
 
 [ext_resource type="Script" uid="uid://bftwlpxehi3bs" path="res://scripts/botão_click.gd" id="1_jnsjb"]
-[ext_resource type="Texture2D" uid="uid://kyjdx4bnkjab" path="res://assets/tileset_legacy.png" id="2_kf24t"]
+[ext_resource type="Texture2D" uid="uid://kyjdx4bnkjab" path="res://assets/SPRITES/tileset_legacy.png" id="2_kf24t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uaejf"]
 size = Vector2(16, 16)

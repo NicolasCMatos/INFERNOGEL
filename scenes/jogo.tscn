@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://v6ds72st8t2l"]
 
 [ext_resource type="Script" uid="uid://dej6h32x68dsr" path="res://scenes/gamemanager.gd" id="1_gsaar"]
-[ext_resource type="Texture2D" uid="uid://kyjdx4bnkjab" path="res://assets/tileset_legacy.png" id="1_sq8yp"]
-[ext_resource type="Texture2D" uid="uid://bkefj2qa1u1i3" path="res://assets/coiso de fran.jpg" id="2_1b3iq"]
+[ext_resource type="Texture2D" uid="uid://kyjdx4bnkjab" path="res://assets/SPRITES/tileset_legacy.png" id="1_sq8yp"]
+[ext_resource type="Texture2D" uid="uid://bkefj2qa1u1i3" path="res://assets/SPRITES/coiso de fran.jpg" id="2_1b3iq"]
 [ext_resource type="PackedScene" uid="uid://c205mlircdb7k" path="res://scenes/peças.tscn" id="2_drirx"]
 [ext_resource type="FontFile" uid="uid://c6jpdlst1tpor" path="res://assets/PixelifySans-Regular.ttf" id="2_y6f35"]
 [ext_resource type="PackedScene" uid="uid://utrrnss8gijb" path="res://scenes/personagem.tscn" id="3_1b3iq"]
@@ -23,9 +23,10 @@
 [ext_resource type="PackedScene" uid="uid://c0druoddmbfb4" path="res://scenes/menu_de_pausa.tscn" id="18_iuyaa"]
 [ext_resource type="Shader" uid="uid://cdmy2yw8oystt" path="res://screen effect/jogo.gdshader" id="19_3dnd0"]
 [ext_resource type="AudioStream" uid="uid://dk0mf3drbhwa0" path="res://sounds/And_Yet,_El_Mariachi.ogg" id="20_kvikr"]
-[ext_resource type="Texture2D" uid="uid://pil82yvk08oy" path="res://assets/imagem_2026-04-07_181110945.png" id="22_7o8x6"]
+[ext_resource type="Texture2D" uid="uid://pil82yvk08oy" path="res://assets/SPRITES/imagem_2026-04-07_181110945.png" id="22_7o8x6"]
 [ext_resource type="AudioStream" uid="uid://bhq6remvqko1h" path="res://scenes/universfield-new-notification-026-380249.mp3" id="22_pa2dy"]
 [ext_resource type="Script" uid="uid://b0jg3dyda7rch" path="res://scenes/tutorialcheckpoint.gd" id="26_5nfim"]
+[ext_resource type="Texture2D" uid="uid://dfxjneqyblbwl" path="res://assets/SPRITES/1-removebg-preview.png" id="27_8agws"]
 [ext_resource type="Texture2D" uid="uid://dhk47035tha0e" path="res://assets/Ambiente/checkpoint.png" id="27_18a3m"]
 [ext_resource type="Script" uid="uid://bwy8p3b2512v6" path="res://scenes/tutorial_2.gd" id="28_18a3m"]
 [ext_resource type="Script" uid="uid://vgp07m7a47l" path="res://scripts/portaQB.gd" id="29_8agws"]
@@ -1205,7 +1206,7 @@ size = Vector2(88, 48)
 base_font = ExtResource("2_y6f35")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18a3m"]
-size = Vector2(40, 88)
+size = Vector2(208, 71.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_217se"]
 size = Vector2(72, 24)
@@ -1278,6 +1279,7 @@ position = Vector2(696, 1236)
 gamemanager = NodePath("../../Gamemanager")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1255727566]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="background" type="Node" parent="." unique_id=544635794]
@@ -1309,6 +1311,7 @@ tile_set = SubResource("TileSet_pemor")
 [node name="Sombras" type="Node" parent="." unique_id=588245047]
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Sombras" unique_id=1125356076]
+visible = false
 occluder = SubResource("OccluderPolygon2D_k05ng")
 occluder_light_mask = 3
 
@@ -1563,7 +1566,7 @@ script = ExtResource("26_5nfim")
 painel_popup = NodePath("interface do tutorial/painel popup")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutoriais/tutorial" unique_id=1957506225]
-position = Vector2(1140, 480)
+position = Vector2(1144, 480)
 shape = SubResource("RectangleShape2D_jhbch")
 
 [node name="interface do tutorial" type="CanvasLayer" parent="tutoriais/tutorial" unique_id=1408883550]
@@ -1586,24 +1589,24 @@ size_flags_vertical = 4
 
 [node name="texto explicativo" type="Label" parent="tutoriais/tutorial/interface do tutorial/painel popup" unique_id=1513527557]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 52.0
-offset_right = 624.0
-offset_bottom = 204.0
+offset_left = -64.0
+offset_top = 26.0
+offset_right = 668.0
+offset_bottom = 223.0
 theme_override_fonts/font = SubResource("FontVariation_5nfim")
 theme_override_font_sizes/font_size = 39
-text = "checkpoints dentro do jogo são
-definidos como pequenos rituais
-no chão
-E para interagir com portas"
+text = "checkpoints dentro do jogo
+ são assim:
+passe e estará ativado
+"
 horizontal_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="tutoriais/tutorial/interface do tutorial/painel popup" unique_id=1841998638]
 layout_mode = 0
-offset_left = 224.0
-offset_top = 212.0
-offset_right = 408.0
-offset_bottom = 396.0
+offset_left = 200.0
+offset_top = 202.0
+offset_right = 432.0
+offset_bottom = 418.0
 texture = ExtResource("27_18a3m")
 
 [node name="tutorial2" type="Area2D" parent="tutoriais" unique_id=1641995326 node_paths=PackedStringArray("painel_popup")]
@@ -1611,7 +1614,7 @@ script = ExtResource("28_18a3m")
 painel_popup = NodePath("interface do tutorial2/painel popup2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutoriais/tutorial2" unique_id=1889993563]
-position = Vector2(148, 420)
+position = Vector2(48, 368.75)
 shape = SubResource("RectangleShape2D_18a3m")
 
 [node name="interface do tutorial2" type="CanvasLayer" parent="tutoriais/tutorial2" unique_id=156226438]
@@ -1652,6 +1655,53 @@ offset_top = 170.0
 offset_right = 509.0
 offset_bottom = 461.0
 texture = ExtResource("22_7o8x6")
+
+[node name="tutorial3" type="Area2D" parent="tutoriais" unique_id=524873032 node_paths=PackedStringArray("painel_popup")]
+script = ExtResource("28_18a3m")
+painel_popup = NodePath("interface do tutorial2/painel popup2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tutoriais/tutorial3" unique_id=1523986311]
+position = Vector2(612, -84.375)
+shape = SubResource("RectangleShape2D_18a3m")
+
+[node name="interface do tutorial2" type="CanvasLayer" parent="tutoriais/tutorial3" unique_id=1350051109]
+
+[node name="painel popup2" type="Panel" parent="tutoriais/tutorial3/interface do tutorial2" unique_id=1964780889]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -328.0
+offset_top = -222.0
+offset_right = 328.0
+offset_bottom = 222.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="texto explicativo2" type="Label" parent="tutoriais/tutorial3/interface do tutorial2/painel popup2" unique_id=1275539343]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 52.0
+offset_right = 624.0
+offset_bottom = 204.0
+theme_override_fonts/font = SubResource("FontVariation_5nfim")
+theme_override_font_sizes/font_size = 39
+text = "MOVIMENTO:         INTERAÇÃO:
+
+                                       E"
+horizontal_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="tutoriais/tutorial3/interface do tutorial2/painel popup2" unique_id=1497045325]
+layout_mode = 0
+offset_left = -64.0
+offset_top = 58.0
+offset_right = 456.0
+offset_bottom = 365.0
+texture = ExtResource("27_8agws")
 
 [node name="Portaburaco" parent="." unique_id=128866336 instance=ExtResource("17_iaqm3")]
 light_mask = 3
@@ -1725,6 +1775,8 @@ position = Vector2(924, 84)
 [connection signal="body_exited" from="tutoriais/tutorial" to="tutoriais/tutorial" method="_on_body_exited"]
 [connection signal="body_entered" from="tutoriais/tutorial2" to="tutoriais/tutorial2" method="_on_body_entered"]
 [connection signal="body_exited" from="tutoriais/tutorial2" to="tutoriais/tutorial2" method="_on_body_exited"]
+[connection signal="body_entered" from="tutoriais/tutorial3" to="tutoriais/tutorial3" method="_on_body_entered"]
+[connection signal="body_exited" from="tutoriais/tutorial3" to="tutoriais/tutorial3" method="_on_body_exited"]
 
 [editable path="Portaburaco"]
 [editable path="PortaFinal"]
