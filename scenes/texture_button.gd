@@ -1,12 +1,24 @@
 extends TextureButton
 
 @export var posicao_correta: Vector2
+@export var target_maker: Marker2D
+@export var distance_threshold: float = 30.0
+
 
 var arrastando: bool = false
-var offset_mouse: Vector2 = Vector2.ZERO
+var offset_mouse: Vector2
 
 var distancia_encaixe: float = 100.0
 var ja_encaixou: bool = false
+
+func check_snap() -> void:
+	if not target_maker:
+		return
+	var meu_centro = global_position + (size/2)
+	var distancia = meu_centro.distance_to(target_maker.global_position)
+	if distancia <= distance_threshold:
+		global_position = target_maker.global_position - (size/2)
+		verificar_encaixe()
 
 func _ready() -> void:
 	button_down.connect(_on_button_down)

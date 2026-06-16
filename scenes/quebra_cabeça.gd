@@ -2,6 +2,8 @@ extends Control
 
 signal puzzle_concluido
 @onready var lista_pecas: Array = $Pecas.get_children()
+var centro_do_botao = global_position + (size/2)
+
 
 func _ready() -> void:
 	# Garante que começa totalmente invisível e resetado na tela
@@ -15,7 +17,7 @@ func iniciar_puzzle() -> void:
 	configurar_quebra_cabeca()
 
 func configurar_quebra_cabeca() -> void:
-	var lista_espacos = $EspacosCorretos.get_children()
+	var lista_espacos = $Pecas/EspacosCorretos.get_children()
 	
 	for i in range(min(lista_pecas.size(), lista_espacos.size())):
 		if lista_pecas[i] is TextureButton:

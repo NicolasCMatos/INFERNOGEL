@@ -2,8 +2,43 @@
 
 [ext_resource type="Script" uid="uid://cebtojlglsjmm" path="res://scenes/quebra_cabeça.gd" id="1_oa2vr"]
 [ext_resource type="Script" uid="uid://cn1bmnuerklbk" path="res://scenes/texture_button.gd" id="2_5e7xl"]
-[ext_resource type="Texture2D" uid="uid://dsddxjikbw7v0" path="res://assets/SPRITES/sprites cursores olho aberto aa.jpg" id="2_v3fgo"]
-[ext_resource type="Texture2D" uid="uid://b61t6fbdqvkp8" path="res://assets/SPRITES/sprites cursores olho aberto a.jpg" id="4_kfcr4"]
+[ext_resource type="Texture2D" uid="uid://dvumj06xdhom4" path="res://assets/SPRITES/quebra-cabeça.png" id="2_wl88l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3fgo"]
+atlas = ExtResource("2_wl88l")
+region = Rect2(-0.03613949, 168, 24.03614, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfcr4"]
+atlas = ExtResource("2_wl88l")
+region = Rect2(80, 176, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wl88l"]
+atlas = ExtResource("2_wl88l")
+region = Rect2(176, 168, 32, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67u51"]
+atlas = ExtResource("2_wl88l")
+region = Rect2(240, 80, 31.058777, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_565us"]
+atlas = ExtResource("2_wl88l")
+region = Rect2(152, 80, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsxr3"]
+atlas = ExtResource("2_wl88l")
+region = Rect2(64, 80, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8swg"]
+atlas = ExtResource("2_wl88l")
+region = Rect2(32, 67.1985, 34.59102, 28.801498)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wtc6"]
+atlas = ExtResource("2_wl88l")
+region = Rect2(222.59604, -0.21833038, 38.59305, 32.41958)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15g0a"]
+atlas = ExtResource("2_wl88l")
+region = Rect2(134.83713, -0.042684555, 35.339233, 24.352423)
 
 [node name="QuebraCabeça" type="Control" unique_id=1368787867]
 layout_mode = 3
@@ -27,59 +62,159 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -305.5
-offset_top = -283.0
-offset_right = 305.5
-offset_bottom = 283.0
+offset_left = -46.0
+offset_top = -23.0
+offset_right = 35.0
+offset_bottom = 55.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 0, 1, 1)
-
-[node name="EspacosCorretos" type="Control" parent="." unique_id=1298359625]
-layout_mode = 1
-anchors_preset = 0
-
-[node name="posiçao1" type="Marker2D" parent="EspacosCorretos" unique_id=1877682498]
-position = Vector2(-72, -2)
-gizmo_extents = 90.0
-
-[node name="posição2" type="Marker2D" parent="EspacosCorretos" unique_id=992227139]
-position = Vector2(100, -2)
 
 [node name="Pecas" type="Control" parent="." unique_id=794891667]
 layout_mode = 1
 anchors_preset = 0
 
-[node name="TextureButton" type="TextureButton" parent="Pecas" unique_id=684031495]
+[node name="TextureButton" type="TextureButton" parent="Pecas" unique_id=684031495 node_paths=PackedStringArray("target_maker")]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -226.0
-offset_top = -241.0
-offset_right = -1.0
-offset_bottom = 248.0
+offset_left = -38.0
+offset_top = 14.0
+offset_right = -14.0
+offset_bottom = 54.0
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("2_v3fgo")
+texture_normal = SubResource("AtlasTexture_v3fgo")
 script = ExtResource("2_5e7xl")
 posicao_correta = Vector2(-226, -241)
+target_maker = NodePath("../EspacosCorretos/posiçao1")
 
-[node name="TextureButton2" type="TextureButton" parent="Pecas" unique_id=30170665]
+[node name="TextureButton2" type="TextureButton" parent="Pecas" unique_id=1506187541 node_paths=PackedStringArray("target_maker")]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -1.0
-offset_top = -242.0
-offset_right = 226.0
-offset_bottom = 247.0
-grow_horizontal = 2
-grow_vertical = 2
-texture_normal = ExtResource("4_kfcr4")
+offset_left = -27.0
+offset_top = 22.0
+offset_right = 21.0
+offset_bottom = 62.0
+texture_normal = SubResource("AtlasTexture_kfcr4")
 script = ExtResource("2_5e7xl")
-posicao_correta = Vector2(-1, -242)
+posicao_correta = Vector2(-226, -241)
+target_maker = NodePath("../EspacosCorretos/posição2")
+
+[node name="TextureButton3" type="TextureButton" parent="Pecas" unique_id=504269741 node_paths=PackedStringArray("target_maker")]
+layout_mode = 1
+offset_left = 1.0
+offset_top = 14.0
+offset_right = 49.0
+offset_bottom = 54.0
+texture_normal = SubResource("AtlasTexture_wl88l")
+script = ExtResource("2_5e7xl")
+posicao_correta = Vector2(-226, -241)
+target_maker = NodePath("../EspacosCorretos/posição3")
+
+[node name="TextureButton4" type="TextureButton" parent="Pecas" unique_id=660644585 node_paths=PackedStringArray("target_maker")]
+layout_mode = 1
+offset_left = -4.0
+offset_top = -5.0
+offset_right = 44.0
+offset_bottom = 35.0
+texture_normal = SubResource("AtlasTexture_67u51")
+script = ExtResource("2_5e7xl")
+posicao_correta = Vector2(-226, -241)
+target_maker = NodePath("../EspacosCorretos/posição4")
+
+[node name="TextureButton5" type="TextureButton" parent="Pecas" unique_id=1284180549 node_paths=PackedStringArray("target_maker")]
+layout_mode = 1
+offset_left = -24.0
+offset_top = -5.0
+offset_right = 24.0
+offset_bottom = 35.0
+texture_normal = SubResource("AtlasTexture_565us")
+script = ExtResource("2_5e7xl")
+posicao_correta = Vector2(-226, -241)
+target_maker = NodePath("../EspacosCorretos/posição5")
+
+[node name="TextureButton6" type="TextureButton" parent="Pecas" unique_id=1523574060 node_paths=PackedStringArray("target_maker")]
+layout_mode = 1
+offset_left = -43.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 35.0
+texture_normal = SubResource("AtlasTexture_fsxr3")
+script = ExtResource("2_5e7xl")
+posicao_correta = Vector2(-226, -241)
+target_maker = NodePath("../EspacosCorretos/posição6")
+
+[node name="TextureButton7" type="TextureButton" parent="Pecas" unique_id=1036379923 node_paths=PackedStringArray("target_maker")]
+layout_mode = 1
+offset_left = -5.0
+offset_top = -17.0
+offset_right = 43.0
+offset_bottom = 23.0
+texture_normal = SubResource("AtlasTexture_c8swg")
+script = ExtResource("2_5e7xl")
+posicao_correta = Vector2(-226, -241)
+target_maker = NodePath("../EspacosCorretos/posição7")
+
+[node name="TextureButton8" type="TextureButton" parent="Pecas" unique_id=778439947 node_paths=PackedStringArray("target_maker")]
+layout_mode = 1
+offset_left = -22.0
+offset_top = -16.0
+offset_right = 26.0
+offset_bottom = 24.0
+texture_normal = SubResource("AtlasTexture_8wtc6")
+script = ExtResource("2_5e7xl")
+posicao_correta = Vector2(-226, -241)
+target_maker = NodePath("../EspacosCorretos/posição8")
+
+[node name="TextureButton9" type="TextureButton" parent="Pecas" unique_id=98798710 node_paths=PackedStringArray("target_maker")]
+layout_mode = 1
+offset_left = -41.0
+offset_top = -16.0
+offset_right = 7.0
+offset_bottom = 24.0
+texture_normal = SubResource("AtlasTexture_15g0a")
+script = ExtResource("2_5e7xl")
+posicao_correta = Vector2(-226, -241)
+target_maker = NodePath("../EspacosCorretos/posição9")
+
+[node name="EspacosCorretos" type="Control" parent="Pecas" unique_id=1298359625]
+layout_mode = 1
+anchors_preset = 0
+
+[node name="posiçao1" type="Marker2D" parent="Pecas/EspacosCorretos" unique_id=1877682498]
+position = Vector2(-27, 35)
+gizmo_extents = 0.0
+
+[node name="posição2" type="Marker2D" parent="Pecas/EspacosCorretos" unique_id=992227139]
+position = Vector2(-5, 40)
+gizmo_extents = 0.0
+
+[node name="posição3" type="Marker2D" parent="Pecas/EspacosCorretos" unique_id=727743319]
+position = Vector2(26, 35)
+gizmo_extents = 0.0
+
+[node name="posição4" type="Marker2D" parent="Pecas/EspacosCorretos" unique_id=1259385503]
+position = Vector2(18, 14)
+gizmo_extents = 0.0
+
+[node name="posição5" type="Marker2D" parent="Pecas/EspacosCorretos" unique_id=1643561240]
+position = Vector2(-8, 18)
+gizmo_extents = 0.0
+
+[node name="posição6" type="Marker2D" parent="Pecas/EspacosCorretos" unique_id=1190033726]
+position = Vector2(-24, 14)
+gizmo_extents = 0.0
+
+[node name="posição7" type="Marker2D" parent="Pecas/EspacosCorretos" unique_id=1474696830]
+position = Vector2(21, -5)
+gizmo_extents = 0.0
+
+[node name="posição8" type="Marker2D" parent="Pecas/EspacosCorretos" unique_id=1332367528]
+gizmo_extents = 0.0
+
+[node name="posição9" type="Marker2D" parent="Pecas/EspacosCorretos" unique_id=2143048353]
+position = Vector2(-24, 0)
+gizmo_extents = 0.0
