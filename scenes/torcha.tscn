@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://b28eycyrduf0p"]
+
+[ext_resource type="Texture2D" uid="uid://b6bqtdnlt3fdl" path="res://assets/Ambiente/tochauau.png" id="1_18kag"]
+
+[sub_resource type="Gradient" id="Gradient_0c0ry"]
+offsets = PackedFloat32Array(0, 0.67469877)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4sjka"]
+gradient = SubResource("Gradient_0c0ry")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkhqu"]
+atlas = ExtResource("1_18kag")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iam2h"]
+atlas = ExtResource("1_18kag")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wkhqu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iam2h")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Torcha" type="PointLight2D" unique_id=1274885134]
+light_mask = 0
+position = Vector2(7.1525574e-07, 4.7683716e-07)
+scale = Vector2(7.3632817, 7.3632817)
+color = Color(0.72230506, 0.4336153, 0.28564832, 1)
+energy = 0.0
+shadow_enabled = true
+shadow_filter = 1
+texture = SubResource("GradientTexture2D_4sjka")
+texture_scale = 0.35
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=965868006]
+position = Vector2(-1.5931988e-07, -5.9604645e-08)
+scale = Vector2(0.13580902, 0.135809)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+autoplay = "default"
+frame_progress = 0.053592753
