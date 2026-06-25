@@ -4,7 +4,7 @@ extends Node2D
 @export var chave_no_cenario: Area2D
 signal puzzle_resolvido
 # A sequência correta que o jogador deve acertar (ex: Botão 2, depois 1, depois 3)
-const SEQUENCIA_CORRETA: Array[int] = [1, 2, 3]
+const SEQUENCIA_CORRETA: Array[int] = [1,2,5,3,4]
 
 # Lista que vai guardar a ordem que o jogador está a pisar
 var sequencia_do_jogador: Array[int] = []

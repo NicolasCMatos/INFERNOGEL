@@ -17,11 +17,17 @@
 [ext_resource type="Texture2D" uid="uid://b6bqtdnlt3fdl" path="res://assets/Ambiente/tochauau.png" id="8_dq0y2"]
 [ext_resource type="Script" uid="uid://22htkhqct3g5" path="res://scenes/botaomusica_1.gd" id="9_ajcpg"]
 [ext_resource type="PackedScene" uid="uid://c8ukxae5m8lse" path="res://scenes/checkpoint.tscn" id="11_qbbxf"]
-[ext_resource type="AudioStream" uid="uid://dp8ne6uh7xyav" path="res://scenes/Wrong Buzzer - Sound Effect.mp3" id="12_ajcpg"]
+[ext_resource type="AudioStream" uid="uid://d3y488xcu0vgy" path="res://scenes/dó(1).mp3" id="13_5snu2"]
+[ext_resource type="Texture2D" uid="uid://dhthsq740l06v" path="res://assets/Ambiente/botões música.png" id="13_6jveh"]
 [ext_resource type="Texture2D" uid="uid://c6toau4d6o4h3" path="res://assets/Ambiente/quadro quebra-cabeça.png" id="14_kvikr"]
 [ext_resource type="Script" uid="uid://cge81gyeylqul" path="res://scenes/area_do_quebra_cabeça.gd" id="14_wa8a0"]
+[ext_resource type="AudioStream" uid="uid://bnh3wrmnx2xdd" path="res://scenes/Wrong Buzzer - Sound Effect_[cut_1sec].mp3" id="15_o17o8"]
+[ext_resource type="AudioStream" uid="uid://px1s1xmu7m6j" path="res://scenes/mi(2).mp3" id="15_wsqii"]
+[ext_resource type="AudioStream" uid="uid://bppib6l8lw01q" path="res://scenes/fá(3).mp3" id="16_jgeih"]
 [ext_resource type="Script" uid="uid://cmmsjdxjjhgpa" path="res://scenes/fim_da_fase.gd" id="16_k3sjr"]
+[ext_resource type="AudioStream" uid="uid://b0xixsme85rm6" path="res://scenes/ré(4).mp3" id="17_auonv"]
 [ext_resource type="PackedScene" uid="uid://cuxqn2fretmxu" path="res://scenes/porta.tscn" id="17_iaqm3"]
+[ext_resource type="AudioStream" uid="uid://cckgp3k4elspd" path="res://scenes/nota(5).mp3" id="18_g5c8f"]
 [ext_resource type="PackedScene" uid="uid://c0druoddmbfb4" path="res://scenes/menu_de_pausa.tscn" id="18_iuyaa"]
 [ext_resource type="Shader" uid="uid://cdmy2yw8oystt" path="res://screen effect/jogo.gdshader" id="19_3dnd0"]
 [ext_resource type="AudioStream" uid="uid://dk0mf3drbhwa0" path="res://sounds/And_Yet,_El_Mariachi.ogg" id="20_kvikr"]
@@ -34,6 +40,7 @@
 [ext_resource type="PackedScene" uid="uid://b28eycyrduf0p" path="res://scenes/torcha.tscn" id="28_dq0y2"]
 [ext_resource type="Script" uid="uid://vgp07m7a47l" path="res://scripts/portaQB.gd" id="29_8agws"]
 [ext_resource type="PackedScene" uid="uid://dsty4g54jp782" path="res://scenes/chave_amarela.tscn" id="29_jhbch"]
+[ext_resource type="Texture2D" uid="uid://koqykdwc0dyl" path="res://assets/Ambiente/tecla E.png" id="34_hp1jg"]
 [ext_resource type="Shader" uid="uid://bo5aknth8abdl" path="res://screen effect/fog.gdshader" id="35_hrtw4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_avosf"]
@@ -1209,6 +1216,26 @@ size = Vector2(112, 238)
 [sub_resource type="CircleShape2D" id="CircleShape2D_7o8x6"]
 radius = 8.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_l62rv"]
+atlas = ExtResource("13_6jveh")
+region = Rect2(2.9687266, 28.177038, 18.920673, 15.272604)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ufu4"]
+atlas = ExtResource("13_6jveh")
+region = Rect2(3.001423, 4.054926, 18.524181, 15.284136)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8w1do"]
+atlas = ExtResource("13_6jveh")
+region = Rect2(51.110123, 4.0721827, 18.108551, 16.025948)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70bb0"]
+atlas = ExtResource("13_6jveh")
+region = Rect2(3.1670656, 52.067787, 18.14318, 15.105652)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2p67"]
+atlas = ExtResource("13_6jveh")
+region = Rect2(51.07299, 51.986126, 18.380074, 15.048679)
+
 [sub_resource type="Gradient" id="Gradient_0c0ry"]
 offsets = PackedFloat32Array(0, 0.67469877)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -1385,7 +1412,6 @@ tile_set = SubResource("TileSet_yf5fn")
 [node name="Sombras" type="Node" parent="." unique_id=588245047]
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Sombras" unique_id=1125356076]
-visible = false
 occluder = SubResource("OccluderPolygon2D_k05ng")
 occluder_light_mask = 3
 
@@ -1407,91 +1433,88 @@ chave_no_cenario = NodePath("../chave roxa")
 [node name="botaomusica1" type="Area2D" parent="PuzzleMusica" unique_id=272245290]
 position = Vector2(584, 8)
 script = ExtResource("9_ajcpg")
+som_do_botao = ExtResource("13_5snu2")
+volume_do_som = 50.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleMusica/botaomusica1" unique_id=273164994]
 position = Vector2(-620, 892)
 shape = SubResource("CircleShape2D_7o8x6")
 
 [node name="Sprite2D" type="Sprite2D" parent="PuzzleMusica/botaomusica1/CollisionShape2D" unique_id=917452508]
-position = Vector2(3.8146973e-06, -1.4305115e-05)
-scale = Vector2(0.061696667, 0.09622002)
-texture = ExtResource("22_7o8x6")
+position = Vector2(4.7683716e-07, -5.722046e-06)
+scale = Vector2(0.8333332, 0.9999999)
+texture = SubResource("AtlasTexture_l62rv")
 
 [node name="botaomusica2" type="Area2D" parent="PuzzleMusica" unique_id=371641696]
 position = Vector2(584, 8)
 script = ExtResource("9_ajcpg")
 botao_id = 2
+som_do_botao = ExtResource("15_wsqii")
+volume_do_som = 50.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleMusica/botaomusica2" unique_id=1650846011]
 position = Vector2(-620, 916)
 shape = SubResource("CircleShape2D_7o8x6")
 
 [node name="Sprite2D" type="Sprite2D" parent="PuzzleMusica/botaomusica2/CollisionShape2D" unique_id=1713602356]
-position = Vector2(0, -1.4305115e-06)
-scale = Vector2(0.061696697, 0.08247423)
-texture = ExtResource("22_7o8x6")
+position = Vector2(2.1234155e-07, -0.04768954)
+scale = Vector2(0.77777773, 0.92697245)
+texture = SubResource("AtlasTexture_4ufu4")
 
 [node name="botaomusica3" type="Area2D" parent="PuzzleMusica" unique_id=2064159527]
 position = Vector2(-40, 992)
 script = ExtResource("9_ajcpg")
 botao_id = 3
+som_do_botao = ExtResource("16_jgeih")
+volume_do_som = 50.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleMusica/botaomusica3" unique_id=237422105]
 position = Vector2(4, -44)
 shape = SubResource("CircleShape2D_7o8x6")
 
 [node name="Sprite2D" type="Sprite2D" parent="PuzzleMusica/botaomusica3/CollisionShape2D" unique_id=35475323]
-scale = Vector2(0.051413897, 0.06872852)
-texture = ExtResource("22_7o8x6")
+position = Vector2(-5.364418e-07, -5.4240227e-06)
+scale = Vector2(0.74253786, 0.83671796)
+texture = SubResource("AtlasTexture_8w1do")
 
 [node name="botaomusica4" type="Area2D" parent="PuzzleMusica" unique_id=66089622]
 position = Vector2(-64, 984)
 script = ExtResource("9_ajcpg")
 botao_id = 4
+som_do_botao = ExtResource("17_auonv")
+volume_do_som = 50.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleMusica/botaomusica4" unique_id=594863210]
 position = Vector2(28, -12)
 shape = SubResource("CircleShape2D_7o8x6")
 
 [node name="Sprite2D" type="Sprite2D" parent="PuzzleMusica/botaomusica4/CollisionShape2D" unique_id=1926884285]
-position = Vector2(0, -1.335144e-05)
-scale = Vector2(0.05141392, 0.061855763)
-texture = ExtResource("22_7o8x6")
+position = Vector2(-1.4305115e-06, 2.0474195e-05)
+scale = Vector2(0.7425379, 0.86666226)
+texture = SubResource("AtlasTexture_70bb0")
 
 [node name="botaomusica5" type="Area2D" parent="PuzzleMusica" unique_id=1057911717]
 position = Vector2(-96, 1000)
 script = ExtResource("9_ajcpg")
 botao_id = 5
+som_do_botao = ExtResource("18_g5c8f")
+volume_do_som = 50.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleMusica/botaomusica5" unique_id=1646499387]
 position = Vector2(60, -4)
 shape = SubResource("CircleShape2D_7o8x6")
 
 [node name="Sprite2D" type="Sprite2D" parent="PuzzleMusica/botaomusica5/CollisionShape2D" unique_id=660200674]
-position = Vector2(1.9073486e-06, -1.9073486e-06)
-scale = Vector2(0.061696667, 0.08247423)
-texture = ExtResource("22_7o8x6")
-
-[node name="botaomusica6" type="Area2D" parent="PuzzleMusica" unique_id=414211050]
-position = Vector2(-112, 1024)
-script = ExtResource("9_ajcpg")
-botao_id = 6
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleMusica/botaomusica6" unique_id=313869205]
-position = Vector2(76, -4)
-shape = SubResource("CircleShape2D_7o8x6")
-
-[node name="Sprite2D" type="Sprite2D" parent="PuzzleMusica/botaomusica6/CollisionShape2D" unique_id=1217473553]
-position = Vector2(-2.3841858e-07, 0)
-scale = Vector2(0.051413935, 0.06872852)
-texture = ExtResource("22_7o8x6")
+position = Vector2(-7.748604e-07, -4.172325e-06)
+scale = Vector2(0.70986843, 0.8539501)
+texture = SubResource("AtlasTexture_w2p67")
 
 [node name="AudioPlayer" type="AudioStreamPlayer2D" parent="PuzzleMusica" unique_id=175641043]
 position = Vector2(616, -48)
 stream = ExtResource("22_pa2dy")
 
 [node name="AudioErroPlayer" type="AudioStreamPlayer2D" parent="PuzzleMusica" unique_id=1122088189]
-stream = ExtResource("12_ajcpg")
+stream = ExtResource("15_o17o8")
 
 [node name="Buracos" type="Area2D" parent="." unique_id=500544434]
 z_index = 1
@@ -1800,16 +1823,24 @@ theme_override_fonts/font = SubResource("FontVariation_5nfim")
 theme_override_font_sizes/font_size = 39
 text = "MOVIMENTO:         INTERAÇÃO:
 
-                                       E"
+                                       "
 horizontal_alignment = 1
 
 [node name="TextureRect2" type="TextureRect" parent="tutoriais/tutorial3/interface do tutorial2/painel popup2" unique_id=1497045325]
 layout_mode = 0
-offset_left = -64.0
-offset_top = 58.0
-offset_right = 456.0
-offset_bottom = 365.0
+offset_left = -90.0
+offset_top = 49.0
+offset_right = 430.0
+offset_bottom = 356.0
 texture = ExtResource("27_8agws")
+
+[node name="TextureRect" type="TextureRect" parent="tutoriais/tutorial3/interface do tutorial2/painel popup2" unique_id=1859742268]
+layout_mode = 0
+offset_left = 404.0
+offset_top = 173.0
+offset_right = 525.0
+offset_bottom = 290.0
+texture = ExtResource("34_hp1jg")
 
 [node name="Portaburaco" parent="." unique_id=128866336 instance=ExtResource("17_iaqm3")]
 light_mask = 3
@@ -1956,7 +1987,8 @@ energy = 2.32
 texture_scale = 0.4
 
 [node name="Torcha8" parent="tochas" unique_id=1744798001 instance=ExtResource("28_dq0y2")]
-position = Vector2(60.000015, 900)
+position = Vector2(81.12501, 900)
+scale = Vector2(5.712891, 7.3632817)
 energy = 2.32
 texture_scale = 0.4
 
@@ -1971,7 +2003,7 @@ energy = 2.32
 texture_scale = 0.4
 
 [node name="Torcha11" parent="tochas" unique_id=1837209527 instance=ExtResource("28_dq0y2")]
-position = Vector2(1116, 540.00006)
+position = Vector2(1120.0001, 488)
 energy = 2.32
 texture_scale = 0.4
 
@@ -2151,7 +2183,7 @@ energy = 2.32
 texture_scale = 0.4
 
 [node name="Torcha38" parent="tochas" unique_id=1789613752 instance=ExtResource("28_dq0y2")]
-position = Vector2(156.00003, 852.00006)
+position = Vector2(81.00001, 901)
 energy = 2.32
 texture_scale = 0.4
 
@@ -2190,6 +2222,7 @@ layer = 1
 motion_mirroring = Vector2(1920, 1080)
 
 [node name="ColorRect" type="ColorRect" parent="fog/ParallaxLayer" unique_id=170809957]
+visible = false
 material = SubResource("ShaderMaterial_g4v7s")
 offset_right = 1920.0
 offset_bottom = 1080.0
@@ -2211,9 +2244,6 @@ offset_bottom = 1080.0
 [connection signal="body_entered" from="PuzzleMusica/botaomusica5" to="PuzzleMusica" method="_on_area_detector_body_entered"]
 [connection signal="body_entered" from="PuzzleMusica/botaomusica5" to="PuzzleMusica/botaomusica5" method="_on_body_entered"]
 [connection signal="body_exited" from="PuzzleMusica/botaomusica5" to="PuzzleMusica" method="_on_area_detector_body_exited"]
-[connection signal="body_entered" from="PuzzleMusica/botaomusica6" to="PuzzleMusica" method="_on_area_detector_body_entered"]
-[connection signal="body_entered" from="PuzzleMusica/botaomusica6" to="PuzzleMusica/botaomusica6" method="_on_body_entered"]
-[connection signal="body_exited" from="PuzzleMusica/botaomusica6" to="PuzzleMusica" method="_on_area_detector_body_exited"]
 [connection signal="body_entered" from="Buracos" to="Buracos" method="_on_body_entered"]
 [connection signal="ready" from="personagem" to="Buracos" method="_on_personagem_ready"]
 [connection signal="body_entered" from="Fim da fase" to="Fim da fase" method="_on_body_entered"]

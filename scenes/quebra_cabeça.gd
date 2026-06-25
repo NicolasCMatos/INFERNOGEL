@@ -58,6 +58,8 @@ func puzzle_resolvido() -> void:
 	emit_signal("puzzle_concluido")
 	await get_tree().create_timer(1.5).timeout 
 	fechar_puzzle()
+	puzzle_concluido.emit()
+	queue_free()
 
 func fechar_puzzle() -> void:
 	hide()

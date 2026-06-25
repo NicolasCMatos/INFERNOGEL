@@ -2,7 +2,7 @@ extends TextureButton
 
 @export var posicao_correta: Vector2
 @export var target_maker: Marker2D
-@export var distance_threshold: float = 30.0
+@export var distance_threshold: float = 0.50
 
 
 var arrastando: bool = false
