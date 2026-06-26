@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="DialogicStyle" format=3 uid="uid://che0gkhpj4724"]
+
+[ext_resource type="Script" uid="uid://bwg6yncmh2cml" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_xpq2q"]
+[ext_resource type="Script" uid="uid://dv08k6ljua6fm" path="res://addons/dialogic/Resources/dialogic_style.gd" id="2_jqerx"]
+
+[sub_resource type="Resource" id="Resource_uqiyd"]
+script = ExtResource("1_xpq2q")
+overrides = {
+"canvas_layer": "2.0",
+"global_bg_color": "Color(0, 0, 0, 0.3372549)",
+"global_font": "\"res://assets/PixelifySans-Regular.ttf\"",
+"global_font_color": "Color(0.2037358, 0.050811768, 0.3515625, 1)"
+}
+
+[resource]
+script = ExtResource("2_jqerx")
+name = "estilo2"
+layer_info = {
+"": SubResource("Resource_uqiyd")
+}
+metadata/_latest_layer = ""

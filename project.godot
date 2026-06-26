@@ -22,20 +22,26 @@ Dialogic="*uid://ds2q0uclmolvu"
 [dialogic]
 
 directories/dch_directory={
+"bicho": "res://assets/bicho.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"cigarro": "res://assets/cigarro.dtl",
 "final": "res://addons/dialogic/final.dtl",
 "inicio": "res://addons/inicio.dtl",
-"timeline": "res://timeline.dtl"
+"npc1": "res://npc1.dtl",
+"timeline": "res://timeline.dtl",
+"timeline bicho": "res://assets/timeline bicho.dtl"
 }
 layout/style_directory={
 "": "res://addons/dialogic/estilo inicio.tres",
-"estilo inicio": "res://addons/dialogic/estilo inicio.tres"
+"estilo inicio": "res://addons/dialogic/estilo inicio.tres",
+"estilo2": "res://assets/estilo2.tres"
 }
-layout/style_list=["res://addons/dialogic/estilo inicio.tres"]
+layout/style_list=["res://addons/dialogic/estilo inicio.tres", "res://assets/estilo2.tres"]
 layout/default_style="res://addons/dialogic/estilo inicio.tres"
 glossary/default_case_sensitive=true
+variables={}
 
 [display]
 

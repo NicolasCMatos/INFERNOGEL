@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bfp16ryhnnajj"]
 
-[ext_resource type="Script" uid="uid://cebtojlglsjmm" path="res://scenes/quebra_cabeça.gd" id="1_oa2vr"]
-[ext_resource type="Script" uid="uid://cn1bmnuerklbk" path="res://scenes/texture_button.gd" id="2_5e7xl"]
+[ext_resource type="Script" uid="uid://cebtojlglsjmm" path="res://scripts/quebra_cabeça.gd" id="1_oa2vr"]
+[ext_resource type="Script" uid="uid://cn1bmnuerklbk" path="res://scripts/texture_button.gd" id="2_5e7xl"]
 [ext_resource type="Texture2D" uid="uid://dvumj06xdhom4" path="res://assets/SPRITES/quebra-cabeça.png" id="2_wl88l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v3fgo"]
