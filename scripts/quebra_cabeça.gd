@@ -38,7 +38,7 @@ func embaralhar_pecas() -> void:
 	for peca in lista_pecas:
 		if peca is TextureButton:
 			# Sorteia posições seguras espalhadas dentro da visão do jogador
-			var x_aleatorio = random.randf_range(tamanho_tela.x * 0.15, tamanho_tela.x * 0.75)
+			var x_aleatorio = random.randf_range(tamanho_tela.x * 0.3, tamanho_tela.x * 0.75)
 			var y_aleatorio = random.randf_range(tamanho_tela.y * 0.2, tamanho_tela.y * 0.7)
 			peca.global_position = Vector2(x_aleatorio, y_aleatorio)
 

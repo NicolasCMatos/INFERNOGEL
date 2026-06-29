@@ -1366,10 +1366,10 @@ layer = 2
 
 [node name="PeçasLabel" type="Label" parent="Gamemanager/CanvasLayer" unique_id=1976930084]
 z_index = 2
-offset_left = 36.0
-offset_top = 12.0
-offset_right = 268.0
-offset_bottom = 68.0
+offset_left = 98.0
+offset_top = 64.0
+offset_right = 330.0
+offset_bottom = 120.0
 text = "Peças: 0/9"
 label_settings = SubResource("LabelSettings_avosf")
 

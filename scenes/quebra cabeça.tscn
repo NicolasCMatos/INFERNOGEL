@@ -81,10 +81,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -436.0
-offset_top = -246.0
-offset_right = -412.0
-offset_bottom = -206.0
+offset_left = -322.0
+offset_top = -185.0
+offset_right = -298.0
+offset_bottom = -145.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(4, 4)
@@ -95,10 +95,10 @@ target_maker = NodePath("../EspacosCorretos/posiçao1")
 
 [node name="TextureButton2" type="TextureButton" parent="Pecas" unique_id=1506187541 node_paths=PackedStringArray("target_maker")]
 layout_mode = 1
-offset_left = -391.0
-offset_top = -214.0
-offset_right = -343.0
-offset_bottom = -174.0
+offset_left = -69.0
+offset_top = 266.0
+offset_right = -21.0
+offset_bottom = 306.0
 scale = Vector2(4, 4)
 texture_normal = SubResource("AtlasTexture_kfcr4")
 script = ExtResource("2_5e7xl")
@@ -107,10 +107,10 @@ target_maker = NodePath("../EspacosCorretos/posição2")
 
 [node name="TextureButton3" type="TextureButton" parent="Pecas" unique_id=504269741 node_paths=PackedStringArray("target_maker")]
 layout_mode = 0
-offset_left = -284.0
-offset_top = -246.0
-offset_right = -252.0
-offset_bottom = -206.0
+offset_left = 344.0
+offset_top = -124.0
+offset_right = 376.0
+offset_bottom = -84.0
 scale = Vector2(4, 4)
 texture_normal = SubResource("AtlasTexture_wl88l")
 script = ExtResource("2_5e7xl")
@@ -119,10 +119,10 @@ target_maker = NodePath("../EspacosCorretos/posição3")
 
 [node name="TextureButton4" type="TextureButton" parent="Pecas" unique_id=660644585 node_paths=PackedStringArray("target_maker")]
 layout_mode = 1
-offset_left = -303.0
-offset_top = -317.0
-offset_right = -255.0
-offset_bottom = -277.0
+offset_left = 399.0
+offset_top = 106.0
+offset_right = 447.0
+offset_bottom = 146.0
 scale = Vector2(4, 4)
 texture_normal = SubResource("AtlasTexture_67u51")
 script = ExtResource("2_5e7xl")
@@ -136,10 +136,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -379.0
-offset_top = -320.0
-offset_right = -339.0
-offset_bottom = -280.0
+offset_left = -558.0
+offset_top = -11.0
+offset_right = -518.0
+offset_bottom = 29.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(4, 4)
@@ -150,10 +150,10 @@ target_maker = NodePath("../EspacosCorretos/posição5")
 
 [node name="TextureButton6" type="TextureButton" parent="Pecas" unique_id=1523574060 node_paths=PackedStringArray("target_maker")]
 layout_mode = 1
-offset_left = -454.0
-offset_top = -320.0
-offset_right = -414.0
-offset_bottom = -280.0
+offset_left = -633.0
+offset_top = -11.0
+offset_right = -593.0
+offset_bottom = 29.0
 scale = Vector2(4, 4)
 texture_normal = SubResource("AtlasTexture_fsxr3")
 script = ExtResource("2_5e7xl")
@@ -162,10 +162,10 @@ target_maker = NodePath("../EspacosCorretos/posição6")
 
 [node name="TextureButton7" type="TextureButton" parent="Pecas" unique_id=1036379923 node_paths=PackedStringArray("target_maker")]
 layout_mode = 1
-offset_left = -307.0
-offset_top = -370.0
-offset_right = -273.0
-offset_bottom = -342.0
+offset_left = -391.0
+offset_top = 241.0
+offset_right = -357.0
+offset_bottom = 269.0
 scale = Vector2(4, 4)
 texture_normal = SubResource("AtlasTexture_c8swg")
 script = ExtResource("2_5e7xl")
@@ -174,10 +174,10 @@ target_maker = NodePath("../EspacosCorretos/posição7")
 
 [node name="TextureButton8" type="TextureButton" parent="Pecas" unique_id=778439947 node_paths=PackedStringArray("target_maker")]
 layout_mode = 1
-offset_left = -374.0
-offset_top = -363.0
-offset_right = -334.0
-offset_bottom = -323.0
+offset_left = -553.0
+offset_top = -54.0
+offset_right = -513.0
+offset_bottom = -14.0
 scale = Vector2(4, 4)
 texture_normal = SubResource("AtlasTexture_8wtc6")
 script = ExtResource("2_5e7xl")
@@ -186,10 +186,10 @@ target_maker = NodePath("../EspacosCorretos/posição8")
 
 [node name="TextureButton9" type="TextureButton" parent="Pecas" unique_id=98798710 node_paths=PackedStringArray("target_maker")]
 layout_mode = 1
-offset_left = -447.0
-offset_top = -363.0
-offset_right = -412.0
-offset_bottom = -339.0
+offset_left = -626.0
+offset_top = -54.0
+offset_right = -591.0
+offset_bottom = -30.0
 scale = Vector2(4, 4)
 texture_normal = SubResource("AtlasTexture_15g0a")
 script = ExtResource("2_5e7xl")
