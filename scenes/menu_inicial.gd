@@ -11,7 +11,7 @@ func _ready() -> void:
 func _on_iniciar_pressed() -> void:
 	botao.play()
 	await get_tree().create_timer(0.3).timeout
-	Transiçaodefase.change_scene_to("res://scenes/historinha_do_inicio.tscn")
+	get_tree().change_scene_to_file("res://scenes/historinha_do_inicio.tscn")
 
 
 func _on_opções_pressed() -> void:
