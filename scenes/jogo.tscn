@@ -2314,7 +2314,6 @@ environment = SubResource("Environment_g4v7s")
 
 [node name="fog" type="ParallaxBackground" parent="." unique_id=1993823261]
 layer = 1
-visible = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="fog" unique_id=1889314929]
 motion_mirroring = Vector2(1920, 1080)
