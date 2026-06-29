@@ -1,5 +1,7 @@
 extends CanvasLayer
 @onready var botao: AudioStreamPlayer = $botao
+@onready var botoespausa: VBoxContainer = $botoespausa
+@onready var opcoespausa: Panel = $opcoespausa
 
 func _ready() -> void:
 	visible = false
@@ -25,3 +27,15 @@ func _on_sair_pressed() -> void:
 	botao.play()
 	await get_tree().create_timer(0.5).timeout
 	get_tree().quit()
+
+
+func _on_volta_rpausa_pressed() -> void:
+	botao.play()
+	await get_tree().create_timer(0.3).timeout
+	botoespausa.visible = true
+	opcoespausa.visible = false
+
+
+func _on_opcoespausa_pressed() -> void:
+	botoespausa.visible = false
+	opcoespausa.visible = true

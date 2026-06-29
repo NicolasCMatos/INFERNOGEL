@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://dgpk6jj4ixv86"]
+
+[ext_resource type="FontFile" uid="uid://bqrqttc3v7uch" path="res://bpdots.squares-bold.otf" id="1_7yyu4"]
+[ext_resource type="Script" uid="uid://dtbsp5s6l3olb" path="res://scripts/tela_de_creditos.gd" id="1_mvc7b"]
+[ext_resource type="Texture2D" uid="uid://pil82yvk08oy" path="res://assets/SPRITES/imagem_2026-04-07_181110945.png" id="1_o6t2s"]
+
+[node name="ScrollContainer" type="Control" unique_id=771977264]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mvc7b")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=883333698]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05226075, 0.0014714804, 0.035714928, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1148500296]
+layout_mode = 0
+offset_top = -96.0
+offset_right = 1920.0
+offset_bottom = 984.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer" unique_id=460501712]
+layout_mode = 2
+theme_override_constants/line_separation = 5
+theme_override_constants/paragraph_separation = 0
+theme_override_constants/outline_size = 0
+theme_override_fonts/normal_font = ExtResource("1_7yyu4")
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "[center]
+[font_size=60]!Muito obrigado por jogar![/font_size]
+
+
+
+[u]CRÉDITOS[/u]
+
+EQUIPE DE DESENVOLVIMENTO
+
+Nícolas Carvalho Matos
+Giovanna Carlos Ribas de Oliveira
+Franciellen Maria Lima Santana
+Maria Gabriela Albuquerque
+
+
+Em memórias de geleca
+[/center]"
+vertical_alignment = 1
+
+[node name="Imagem20260407181110945" type="Sprite2D" parent="." unique_id=91516533]
+position = Vector2(960, 804)
+scale = Vector2(0.7474227, 0.7474227)
+texture = ExtResource("1_o6t2s")

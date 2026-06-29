@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://gpi5jclqnn6d"]
+
+[ext_resource type="Script" uid="uid://flm0ftx1hgbq" path="res://scripts/transiçaodefase.gd" id="1_whoa0"]
+
+[node name="transiçaodefase" type="CanvasLayer" unique_id=50497621]
+process_mode = 3
+layer = 150
+script = ExtResource("1_whoa0")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=739735728]
+top_level = true
+z_index = 4
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+color = Color(0, 0, 0, 0)

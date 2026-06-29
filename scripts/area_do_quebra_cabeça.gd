@@ -7,6 +7,7 @@ extends Area2D
 @export var pecas_necessarias: int = 9 #quantidade de peças para liberar o botão
 @onready var vazio: Sprite2D = $vazio
 signal puzzle_resolvido
+@onready var qbsom: AudioStreamPlayer2D = $"../qbsom"
 
 func _ready() -> void:
 	if gamemanager:
@@ -30,6 +31,7 @@ func _on_body_exited(body: Node2D) -> void:
 			
 func _on_pecas_atualizadas(quantidade_atual: int):
 	if quantidade_atual >= pecas_necessarias:
+		qbsom.play()
 		vazio.visible = false
 		monitoring = true
 		print('ativadooooo')

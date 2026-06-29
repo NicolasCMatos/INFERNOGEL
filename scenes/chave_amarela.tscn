@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dsty4g54jp782"]
 
 [ext_resource type="Script" uid="uid://24j8r57xq4yb" path="res://scripts/chave_amarela.gd" id="1_ylang"]
-[ext_resource type="Texture2D" uid="uid://kyjdx4bnkjab" path="res://assets/SPRITES/tileset_legacy.png" id="2_8r8fw"]
+[ext_resource type="Texture2D" uid="uid://bm5ihv4htuyn1" path="res://assets/Ambiente/chave.png" id="2_ylang"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1lib4"]
 size = Vector2(24, 24)
@@ -13,10 +13,9 @@ script = ExtResource("1_ylang")
 shape = SubResource("RectangleShape2D_1lib4")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=313983177]
-position = Vector2(7.1525574e-07, 7.1525574e-07)
-scale = Vector2(1.4999999, 1.4999999)
-texture = ExtResource("2_8r8fw")
-region_enabled = true
+position = Vector2(6.7762636e-21, 2.9999998)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("2_ylang")
 region_rect = Rect2(272, 391, 16, 16)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

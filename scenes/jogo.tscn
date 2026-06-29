@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bkefj2qa1u1i3" path="res://assets/SPRITES/coiso de fran.jpg" id="2_1b3iq"]
 [ext_resource type="PackedScene" uid="uid://c205mlircdb7k" path="res://scenes/peças.tscn" id="2_drirx"]
 [ext_resource type="FontFile" uid="uid://c6jpdlst1tpor" path="res://assets/PixelifySans-Regular.ttf" id="2_y6f35"]
+[ext_resource type="FontFile" uid="uid://bqrqttc3v7uch" path="res://bpdots.squares-bold.otf" id="2_ytd1u"]
 [ext_resource type="PackedScene" uid="uid://utrrnss8gijb" path="res://scenes/personagem.tscn" id="3_1b3iq"]
 [ext_resource type="PackedScene" uid="uid://8wbtsstf7roo" path="res://scenes/botao.tscn" id="4_0c0ry"]
 [ext_resource type="Script" uid="uid://c8upos868vnu2" path="res://scenes/buracos.gd" id="4_4sjka"]
@@ -30,7 +31,6 @@
 [ext_resource type="AudioStream" uid="uid://cckgp3k4elspd" path="res://scenes/nota(5).mp3" id="18_g5c8f"]
 [ext_resource type="PackedScene" uid="uid://c0druoddmbfb4" path="res://scenes/menu_de_pausa.tscn" id="18_iuyaa"]
 [ext_resource type="Shader" uid="uid://cdmy2yw8oystt" path="res://screen effect/jogo.gdshader" id="19_3dnd0"]
-[ext_resource type="AudioStream" uid="uid://dk0mf3drbhwa0" path="res://sounds/And_Yet,_El_Mariachi.ogg" id="20_kvikr"]
 [ext_resource type="Texture2D" uid="uid://pil82yvk08oy" path="res://assets/SPRITES/imagem_2026-04-07_181110945.png" id="22_7o8x6"]
 [ext_resource type="AudioStream" uid="uid://bhq6remvqko1h" path="res://scenes/universfield-new-notification-026-380249.mp3" id="22_pa2dy"]
 [ext_resource type="Script" uid="uid://b0jg3dyda7rch" path="res://scripts/tutorialcheckpoint.gd" id="26_5nfim"]
@@ -39,17 +39,22 @@
 [ext_resource type="PackedScene" uid="uid://b28eycyrduf0p" path="res://scenes/torcha.tscn" id="28_dq0y2"]
 [ext_resource type="Script" uid="uid://vgp07m7a47l" path="res://scripts/portaQB.gd" id="29_8agws"]
 [ext_resource type="PackedScene" uid="uid://dsty4g54jp782" path="res://scenes/chave_amarela.tscn" id="29_jhbch"]
+[ext_resource type="AudioStream" uid="uid://c3fp2t3nbtu5w" path="res://sounds/BGM_002.ogg" id="34_76v58"]
 [ext_resource type="Texture2D" uid="uid://koqykdwc0dyl" path="res://assets/Ambiente/tecla E.png" id="34_hp1jg"]
 [ext_resource type="Shader" uid="uid://bo5aknth8abdl" path="res://screen effect/fog.gdshader" id="35_hrtw4"]
 [ext_resource type="Texture2D" uid="uid://b61t6fbdqvkp8" path="res://assets/SPRITES/sprites cursores olho aberto a.jpg" id="38_wsqii"]
 [ext_resource type="Texture2D" uid="uid://b676mba37bngd" path="res://assets/Ambiente/m-removebg-preview.png" id="39_jgeih"]
+[ext_resource type="Texture2D" uid="uid://bm5ihv4htuyn1" path="res://assets/Ambiente/chave.png" id="43_76v58"]
 [ext_resource type="Script" uid="uid://c4mk2uc8vro3a" path="res://scenes/dialogo.gd" id="44_auonv"]
 [ext_resource type="Texture2D" uid="uid://de6vng8fiqf3j" path="res://assets/Ambiente/pituzinhadelicia.png" id="45_g5c8f"]
 [ext_resource type="Texture2D" uid="uid://cc30ltvvi7nyu" path="res://assets/Ambiente/jogo do bixo.png" id="46_g5c8f"]
 [ext_resource type="Texture2D" uid="uid://bph3cijqqae40" path="res://assets/Ambiente/cigarrodeboxta.png" id="47_s0jwm"]
+[ext_resource type="AudioStream" uid="uid://b0kbv8tnrpc4l" path="res://sounds/411178__silverillusionist__pick-up-item-2.wav" id="50_btkwe"]
+[ext_resource type="AudioStream" uid="uid://uokuqet3j88i" path="res://sounds/473582__nox_sound__rock_movement_friction_02.wav" id="51_4hrmu"]
+[ext_resource type="AudioStream" uid="uid://jwle45y2y80x" path="res://sounds/631983__el_boss__game-puzzle-solved.wav" id="52_wxtb7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_avosf"]
-font = ExtResource("2_y6f35")
+font = ExtResource("2_ytd1u")
 font_size = 36
 outline_size = 20
 outline_color = Color(0, 0, 0, 1)
@@ -1276,8 +1281,12 @@ size = Vector2(72, 72)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8agws"]
 size = Vector2(96, 24)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_kvikr"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ili1i"]
 shader = ExtResource("19_3dnd0")
+
+[sub_resource type="QuadMesh" id="QuadMesh_whd25"]
+size = Vector2(1920, 1080)
+center_offset = Vector3(960, 540, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jhbch"]
 size = Vector2(88, 48)
@@ -1743,14 +1752,16 @@ visible = false
 [node name="Crt shader" type="CanvasLayer" parent="." unique_id=1137622238]
 layer = 2
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Crt shader" unique_id=654155618]
-material = SubResource("ShaderMaterial_kvikr")
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Crt shader" unique_id=326551497]
+material = SubResource("ShaderMaterial_ili1i")
+mesh = SubResource("QuadMesh_whd25")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1979034928]
-stream = ExtResource("20_kvikr")
-volume_db = -10.816
-pitch_scale = 0.65
+stream = ExtResource("34_76v58")
+volume_db = -8.241
+pitch_scale = 0.68
 autoplay = true
+bus = &"Musica"
 parameters/looping = true
 
 [node name="tutoriais" type="Node" parent="." unique_id=320938846]
@@ -1939,6 +1950,7 @@ position = Vector2(780, 132)
 required_key = "chave_roxa"
 
 [node name="Sprite2D" parent="portamusica" index="0" unique_id=1137794488]
+modulate = Color(0.64885914, 0.3340754, 1, 1)
 position = Vector2(-720, 888)
 scale = Vector2(1.0000004, 2.9999979)
 
@@ -1994,6 +2006,7 @@ position = Vector2(204, 324)
 key_id = "chave_vermelha"
 
 [node name="Sprite2D" parent="chave vermelha" index="1" unique_id=313983177]
+modulate = Color(1, 0.17254902, 0.3647059, 1)
 region_rect = Rect2(306, 391, 16, 16)
 
 [node name="chave amarela" parent="." unique_id=1782940287 instance=ExtResource("29_jhbch")]
@@ -2012,11 +2025,11 @@ shape = SubResource("RectangleShape2D_dq0y2")
 disabled = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="chave roxa" unique_id=147537820]
+modulate = Color(0.28841016, 0.00011570632, 0.9769152, 1)
 z_index = 1
-position = Vector2(-3.9999995, -1.9073486e-06)
-scale = Vector2(1.5, 1.6309555)
-texture = ExtResource("1_sq8yp")
-region_enabled = true
+position = Vector2(-3.999999, 4.000023)
+scale = Vector2(1, 1.0000042)
+texture = ExtResource("43_76v58")
 region_rect = Rect2(288.84277, 390.93213, 16.42035, 16.260132)
 
 [node name="botao2" parent="." unique_id=1897384117 instance=ExtResource("4_0c0ry")]
@@ -2312,7 +2325,7 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 
 [node name="dialogopitu" type="Area2D" parent="." unique_id=443870096]
-z_index = 1
+z_index = 2
 script = ExtResource("44_auonv")
 timeline_name = "npc1"
 
@@ -2325,7 +2338,7 @@ rotation = 0.44854963
 texture = ExtResource("45_g5c8f")
 
 [node name="dialogojb2" type="Area2D" parent="." unique_id=30527198]
-z_index = 1
+z_index = 2
 script = ExtResource("44_auonv")
 timeline_name = "timeline bicho"
 
@@ -2338,7 +2351,7 @@ rotation = 0.44854963
 texture = ExtResource("46_g5c8f")
 
 [node name="dialogocigarro3" type="Area2D" parent="." unique_id=586394643]
-z_index = 1
+z_index = 2
 script = ExtResource("44_auonv")
 timeline_name = "cigarro"
 
@@ -2349,6 +2362,24 @@ shape = SubResource("RectangleShape2D_g4v7s")
 [node name="Sprite2D" type="Sprite2D" parent="dialogocigarro3/CollisionShape2D" unique_id=352805516]
 rotation = 0.44854963
 texture = ExtResource("47_s0jwm")
+
+[node name="itemsom" type="AudioStreamPlayer2D" parent="." unique_id=387879930]
+stream = ExtResource("50_btkwe")
+volume_db = 24.0
+pitch_scale = 0.9
+bus = &"SFX"
+
+[node name="buracosom" type="AudioStreamPlayer2D" parent="." unique_id=1205396465]
+stream = ExtResource("51_4hrmu")
+volume_db = 7.932
+pitch_scale = 1.1
+bus = &"SFX"
+
+[node name="qbsom" type="AudioStreamPlayer2D" parent="." unique_id=529108841]
+stream = ExtResource("52_wxtb7")
+volume_db = -0.738
+pitch_scale = 1.99
+bus = &"SFX"
 
 [connection signal="body_entered" from="Sombras/movimento camera" to="Sombras/movimento camera" method="_on_body_entered"]
 [connection signal="body_exited" from="Sombras/movimento camera" to="Sombras/movimento camera" method="_on_body_exited"]

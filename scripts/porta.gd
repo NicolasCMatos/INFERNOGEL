@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var required_key = "chave_amarela"
+@onready var portasom: AudioStreamPlayer = $portasom
 
 var player_near = null
 var opened = false
@@ -15,6 +16,7 @@ func _process(delta):
 
 		if required_key in player_near.keys:
 			print("Abrindo porta")
+			portasom.play()
 			open_door()
 		else:
 			print("A porta requer a chave ", required_key)

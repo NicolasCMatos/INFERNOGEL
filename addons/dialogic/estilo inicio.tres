@@ -17,7 +17,7 @@ script = ExtResource("2_l62rv")
 scene = ExtResource("1_1ueeh")
 overrides = {
 "global_bg_color": "Color(0.13671875, 0.05340576, 0.12760639, 0.9019608)",
-"global_font": "\"res://assets/PixelifySans-Regular.ttf\"",
+"global_font": "\"res://bpdots.squares-bold.otf\"",
 "global_font_size": "50.0"
 }
 
@@ -72,4 +72,4 @@ layer_info = {
 "16": SubResource("Resource_gio38"),
 "17": SubResource("Resource_4186m")
 }
-metadata/_latest_layer = ""
+metadata/_latest_layer = "13"

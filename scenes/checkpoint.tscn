@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dhk47035tha0e" path="res://assets/Ambiente/checkpoint.png" id="2_ywqth"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xam77"]
-size = Vector2(48, 48)
+size = Vector2(64, 64)
 
 [node name="checkpoint" type="Area2D" unique_id=1073134361 node_paths=PackedStringArray("spawn_marker")]
 script = ExtResource("1_yyywg")

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bq8ojw4sea1fs" path="res://scripts/porta.gd" id="1_hlcnn"]
 [ext_resource type="Texture2D" uid="uid://cvm3kkuii0qru" path="res://assets/Ambiente/chao2.png" id="2_rwxfp"]
+[ext_resource type="AudioStream" uid="uid://dartm7c8axbk2" path="res://sounds/WhatsApp-Audio-2026-06-29-at-15.18.23.wav" id="3_rwxfp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8gms0"]
 size = Vector2(24, 72)
@@ -31,6 +32,11 @@ shape = SubResource("RectangleShape2D_8gms0")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=885627250]
 position = Vector2(0, 24)
 shape = SubResource("RectangleShape2D_hlcnn")
+
+[node name="portasom" type="AudioStreamPlayer" parent="." unique_id=772312958]
+stream = ExtResource("3_rwxfp")
+pitch_scale = 1.46
+bus = &"SFX"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

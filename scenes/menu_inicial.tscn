@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://c31htpg0ikmlt"]
 
 [ext_resource type="Script" uid="uid://o0pu0icnhhhe" path="res://scenes/menu_inicial.gd" id="1_1lqws"]
-[ext_resource type="FontFile" uid="uid://c6jpdlst1tpor" path="res://assets/PixelifySans-Regular.ttf" id="1_40mju"]
+[ext_resource type="Texture2D" uid="uid://bgjanjwxoa73k" path="res://assets/arte menu.png" id="2_hs7ea"]
+[ext_resource type="FontFile" uid="uid://bj3xb2wo38apf" path="res://assets/OXYGENE1.TTF" id="2_ssr06"]
 [ext_resource type="Shader" uid="uid://cdmy2yw8oystt" path="res://screen effect/jogo.gdshader" id="3_eg8ak"]
-[ext_resource type="AudioStream" uid="uid://cxht62pmt7bmg" path="res://sounds/431917__gamedog74__turning-on-lg-old-tv-Copia.ogg" id="4_nn1uv"]
+[ext_resource type="FontFile" uid="uid://deelave24emub" path="res://assets/bpdots.squares-bold.otf" id="3_hs7ea"]
 [ext_resource type="AudioStream" uid="uid://cdrk8e4tlumds" path="res://sounds/635915__earth_cord__button-push.wav" id="5_twj80"]
+[ext_resource type="AudioStream" uid="uid://dk0mf3drbhwa0" path="res://sounds/And_Yet,_El_Mariachi.ogg" id="6_hs7ea"]
+[ext_resource type="Script" uid="uid://d14m47ejc8n2g" path="res://scripts/controlevolume.gd" id="8_q1sbf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1lqws"]
 bg_color = Color(0.32941177, 0.12941177, 0.1882353, 0.5882353)
@@ -37,6 +40,14 @@ shader = ExtResource("3_eg8ak")
 size = Vector2(1920, 1080)
 center_offset = Vector3(960, 540, 0)
 
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_g4v7s"]
+color = Color(0.8156863, 0.8156863, 0.8156863, 1)
+thickness = 6
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_yf5fn"]
+color = Color(0.79860413, 0.19919711, 0.5910015, 1)
+thickness = 8
+
 [node name="Menu inicial" type="Control" unique_id=1268447418]
 layout_mode = 3
 anchors_preset = 15
@@ -48,71 +59,76 @@ script = ExtResource("1_1lqws")
 metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=905749594]
+visible = false
 layout_mode = 0
 offset_right = 1968.0
 offset_bottom = 1128.0
 color = Color(0.106487505, 9.686314e-07, 0.071167715, 1)
+
+[node name="ArteMenu" type="Sprite2D" parent="." unique_id=2061968240]
+position = Vector2(960, 540)
+texture = ExtResource("2_hs7ea")
 
 [node name="Label" type="Label" parent="." unique_id=322257018]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -543.0
-offset_top = 144.0
-offset_right = 543.0
-offset_bottom = 375.0
+offset_left = -996.0
+offset_top = 168.0
+offset_right = 145.0
+offset_bottom = 399.0
 grow_horizontal = 2
 theme_override_colors/font_shadow_color = Color(0.6793528, 0.17471242, 0.34649867, 1)
 theme_override_constants/shadow_offset_y = 7
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("1_40mju")
-theme_override_font_sizes/font_size = 192
+theme_override_fonts/font = ExtResource("2_ssr06")
+theme_override_font_sizes/font_size = 149
 text = "INFERNOGEL"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1341605567]
+[node name="botoesprincipais" type="VBoxContainer" parent="." unique_id=1341605567]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -268.8
-offset_top = -48.0
-offset_right = 268.80005
-offset_bottom = 336.0
+offset_left = -720.0
+offset_top = -84.0
+offset_right = -182.3999
+offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
 theme_override_constants/separation = 15
 
-[node name="INICIAR" type="Button" parent="VBoxContainer" unique_id=1170681529]
+[node name="INICIAR" type="Button" parent="botoesprincipais" unique_id=1170681529]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource("1_40mju")
-theme_override_font_sizes/font_size = 56
+theme_override_fonts/font = ExtResource("3_hs7ea")
+theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_1lqws")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_40mju")
 theme_override_styles/hover = SubResource("StyleBoxFlat_eg8ak")
 text = "INICIAR"
 
-[node name="OPÇÕES" type="Button" parent="VBoxContainer" unique_id=1003490084]
+[node name="OPÇÕES" type="Button" parent="botoesprincipais" unique_id=1003490084]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource("1_40mju")
-theme_override_font_sizes/font_size = 56
+theme_override_fonts/font = ExtResource("3_hs7ea")
+theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_1lqws")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_40mju")
 theme_override_styles/hover = SubResource("StyleBoxFlat_eg8ak")
 text = "OPÇÕES"
 
-[node name="SAIR" type="Button" parent="VBoxContainer" unique_id=819558646]
+[node name="SAIR" type="Button" parent="botoesprincipais" unique_id=819558646]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource("1_40mju")
-theme_override_font_sizes/font_size = 56
+theme_override_fonts/font = ExtResource("3_hs7ea")
+theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_1lqws")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_40mju")
 theme_override_styles/hover = SubResource("StyleBoxFlat_eg8ak")
@@ -125,15 +141,105 @@ material = SubResource("ShaderMaterial_nn1uv")
 mesh = SubResource("QuadMesh_twj80")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1983517083]
-stream = ExtResource("4_nn1uv")
-volume_db = -8.32
-pitch_scale = 0.97
+stream = ExtResource("6_hs7ea")
+pitch_scale = 0.61
 autoplay = true
+bus = &"Musica"
 
 [node name="botao" type="AudioStreamPlayer" parent="." unique_id=726329030]
 stream = ExtResource("5_twj80")
-volume_db = -6.0
+volume_db = -3.504
+bus = &"SFX"
 
-[connection signal="pressed" from="VBoxContainer/INICIAR" to="." method="_on_iniciar_pressed"]
-[connection signal="pressed" from="VBoxContainer/OPÇÕES" to="." method="_on_opções_pressed"]
-[connection signal="pressed" from="VBoxContainer/SAIR" to="." method="_on_sair_pressed"]
+[node name="opcoes" type="Panel" parent="." unique_id=384123008]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 432.0
+offset_right = 804.0
+offset_bottom = 876.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1lqws")
+
+[node name="Label" type="Label" parent="opcoes" unique_id=1760415867]
+layout_mode = 0
+offset_right = 588.0
+offset_bottom = 96.0
+theme_override_fonts/font = ExtResource("3_hs7ea")
+theme_override_font_sizes/font_size = 47
+text = "OPÇÕES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="opcoes" unique_id=161027022]
+layout_mode = 0
+offset_top = 84.0
+offset_right = 588.0
+offset_bottom = 180.0
+theme_override_colors/font_color = Color(1, 0.81960785, 1, 1)
+theme_override_fonts/font = ExtResource("3_hs7ea")
+theme_override_font_sizes/font_size = 27
+text = "Musica"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VOLTAR" type="Button" parent="opcoes" unique_id=1296292718]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 336.0
+offset_right = 434.0
+offset_bottom = 411.0
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_hs7ea")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_1lqws")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_40mju")
+theme_override_styles/hover = SubResource("StyleBoxFlat_eg8ak")
+text = "VOLTAR"
+
+[node name="controlevolume" type="HSlider" parent="opcoes" unique_id=1077765961]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 144.0
+offset_right = 564.0
+offset_bottom = 192.0
+theme_override_styles/slider = SubResource("StyleBoxLine_g4v7s")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_yf5fn")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_yf5fn")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("8_q1sbf")
+audio_bus_name = "Musica"
+
+[node name="Label3" type="Label" parent="opcoes" unique_id=1924813055]
+layout_mode = 0
+offset_top = 192.0
+offset_right = 588.0
+offset_bottom = 288.0
+theme_override_colors/font_color = Color(1, 0.81960785, 1, 1)
+theme_override_fonts/font = ExtResource("3_hs7ea")
+theme_override_font_sizes/font_size = 27
+text = "SFX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="controlevolume2" type="HSlider" parent="opcoes" unique_id=1960475313]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 252.0
+offset_right = 564.0
+offset_bottom = 300.0
+theme_override_styles/slider = SubResource("StyleBoxLine_g4v7s")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_yf5fn")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_yf5fn")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("8_q1sbf")
+audio_bus_name = "SFX"
+
+[connection signal="pressed" from="botoesprincipais/INICIAR" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="botoesprincipais/OPÇÕES" to="." method="_on_opções_pressed"]
+[connection signal="pressed" from="botoesprincipais/SAIR" to="." method="_on_sair_pressed"]
+[connection signal="pressed" from="opcoes/VOLTAR" to="." method="_on_voltar_pressed"]
+[connection signal="value_changed" from="opcoes/controlevolume" to="opcoes/controlevolume" method="_on_value_changed"]
+[connection signal="value_changed" from="opcoes/controlevolume2" to="opcoes/controlevolume2" method="_on_value_changed"]

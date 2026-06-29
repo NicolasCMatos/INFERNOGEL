@@ -7,4 +7,4 @@ func _ready():
 
 func _on_timeline_ended():
 	print("Fim do diálogo")
-	get_tree().quit()
+	Transiçaodefase.change_scene_to("res://tela de creditos.tscn")
